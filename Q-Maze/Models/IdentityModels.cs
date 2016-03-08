@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 
 namespace Q_Maze.Models
 {
@@ -15,6 +16,13 @@ namespace Q_Maze.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public virtual int HighScore { get; set; }
+        public virtual int GamesPlayed { get; set; }
+        public virtual int GamesWon { get; set; }
+        public virtual int QuestionsTotal { get; set; } //total number of questions attempted in all games
+        public virtual int QuestionsCorrect { get; set; } //total number of correct answers in all games
+        public virtual DateTime RegisterDate { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
