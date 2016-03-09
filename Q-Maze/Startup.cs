@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(Q_Maze.Startup))]
-namespace Q_Maze
+[assembly: OwinStartupAttribute(typeof(QMaze.Startup))]
+namespace QMaze
 {
     public partial class Startup
     {

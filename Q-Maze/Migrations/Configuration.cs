@@ -1,19 +1,19 @@
-namespace Q_Maze.Migrations
+namespace QMaze.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Q_Maze.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<QMaze.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Q_Maze.Models.ApplicationDbContext";
+            ContextKey = "QMaze.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(Q_Maze.Models.ApplicationDbContext context)
+        protected override void Seed(QMaze.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

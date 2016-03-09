@@ -7,9 +7,9 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using System;
-using Q_Maze.Models;
+using QMaze.Models;
 
-namespace Q_Maze
+namespace QMaze
 {
     public partial class Startup
     {

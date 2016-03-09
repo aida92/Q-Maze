@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Q_Maze.Models
+namespace QMaze.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

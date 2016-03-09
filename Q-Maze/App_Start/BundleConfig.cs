@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Q_Maze
+namespace QMaze
 {
     public class BundleConfig
     {

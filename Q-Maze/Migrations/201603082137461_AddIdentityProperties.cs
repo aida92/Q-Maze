@@ -1,4 +1,4 @@
-namespace Q_Maze.Migrations
+namespace QMaze.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using QMaze.DataAccessLayer;
 
-namespace Q_Maze.Controllers
+namespace QMaze.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,7 +16,15 @@ namespace Q_Maze.Controllers
 
         public ActionResult Statistics()
         {
-            ViewBag.Message = "Your game Statistics page.";
+            string message = "Testing : ";
+            
+            using (QuestionContext db = new QuestionContext())
+            {
+                foreach (var q in db.Questions)
+                    message += q.Text;
+            }
+            
+            ViewBag.Message = message;
 
             return View();
         }

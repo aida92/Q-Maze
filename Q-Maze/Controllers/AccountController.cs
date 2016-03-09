@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using Q_Maze.Models;
+using QMaze.Models;
 
-namespace Q_Maze.Controllers
+namespace QMaze.Controllers
 {
     [Authorize]
     public class AccountController : Controller
