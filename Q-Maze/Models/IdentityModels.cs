@@ -22,7 +22,7 @@ namespace QMaze.Models
         public virtual int GamesWon { get; set; }
         public virtual int QuestionsTotal { get; set; } //total number of questions attempted in all games
         public virtual int QuestionsCorrect { get; set; } //total number of correct answers in all games
-        public virtual DateTime RegisterDate { get; set; }
+        public virtual DateTime RegisterDate { get; set; } 
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

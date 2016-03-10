@@ -205,6 +205,7 @@
     <Content Include="obj\Debug\Q-Maze.csproj.GenerateResource.Cache" />
     <Content Include="obj\Debug\Q-Maze.csprojResolveAssemblyReference.cache" />
     <Content Include="web\web.html" />
+    <Content Include="Images\labOnText.pdf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
