@@ -48,7 +48,7 @@ namespace QMaze
 
             app.UseFacebookAuthentication(
                appId: "",
-               appSecret: "");
+               appSecret: ""); 
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
