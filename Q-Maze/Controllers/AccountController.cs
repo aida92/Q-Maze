@@ -407,7 +407,20 @@ namespace QMaze.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+
+                var user = new ApplicationUser()
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    RegisterDate = DateTime.Now.Date,
+                    GamesPlayed = 0,
+                    GamesWon = 0,
+                    QuestionsCorrect = 0,
+                    QuestionsTotal = 0,
+                    HighScore = 0
+                };
+
+               // var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
                 IdentityResult result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

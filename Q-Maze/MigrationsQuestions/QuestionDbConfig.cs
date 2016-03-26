@@ -1,19 +1,20 @@
-namespace QMaze.Migrations
+namespace QMaze.MigrationsQuestions
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<QMaze.Models.ApplicationDbContext>
+    internal sealed class QuestionDbConfig : DbMigrationsConfiguration<QMaze.DataAccessLayer.QuestionContext>
     {
-        public Configuration()
+        public QuestionDbConfig()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "QMaze.Models.ApplicationDbContext";
+            MigrationsDirectory = @"MigrationsQuestions";
+            ContextKey = "QMaze.DataAccessLayer.QuestionContext";
         }
 
-        protected override void Seed(QMaze.Models.ApplicationDbContext context)
+        protected override void Seed(QMaze.DataAccessLayer.QuestionContext context)
         {
             //  This method will be called after migrating to the latest version.
 
