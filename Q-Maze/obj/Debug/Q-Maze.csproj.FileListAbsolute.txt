@@ -113,3 +113,5 @@ C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.Migrations.AddIdentityProperti
 C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\Q-Maze.csproj.GenerateResource.Cache
 C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.dll
 C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.pdb
+C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.MigrationsQuestions.InitialCreate.resources
+C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.MigrationsQuestions.ChangedAttributesTypes.resources

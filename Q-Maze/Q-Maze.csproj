@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44302</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -166,15 +166,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603082101147_InitialCreate.cs" />
-    <Compile Include="Migrations\201603082101147_InitialCreate.Designer.cs">
+    <Compile Include="MigrationsQuestions\201603182218004_InitialCreate.cs" />
+    <Compile Include="MigrationsQuestions\201603182218004_InitialCreate.Designer.cs">
+      <DependentUpon>201603182218004_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsQuestions\201603261442294_ChangedAttributesTypes.cs" />
+    <Compile Include="MigrationsQuestions\201603261442294_ChangedAttributesTypes.Designer.cs">
+      <DependentUpon>201603261442294_ChangedAttributesTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsQuestions\QuestionDbConfig.cs" />
+    <Compile Include="MigrationsIdentity\201603082101147_InitialCreate.cs" />
+    <Compile Include="MigrationsIdentity\201603082101147_InitialCreate.Designer.cs">
       <DependentUpon>201603082101147_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603082137461_AddIdentityProperties.cs" />
-    <Compile Include="Migrations\201603082137461_AddIdentityProperties.Designer.cs">
+    <Compile Include="MigrationsIdentity\201603082137461_AddIdentityProperties.cs" />
+    <Compile Include="MigrationsIdentity\201603082137461_AddIdentityProperties.Designer.cs">
       <DependentUpon>201603082137461_AddIdentityProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MigrationsIdentity\IdentityDbConfig.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -263,11 +272,17 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603082101147_InitialCreate.resx">
+    <EmbeddedResource Include="MigrationsQuestions\201603182218004_InitialCreate.resx">
+      <DependentUpon>201603182218004_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsIdentity\201603082101147_InitialCreate.resx">
       <DependentUpon>201603082101147_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603082137461_AddIdentityProperties.resx">
+    <EmbeddedResource Include="MigrationsIdentity\201603082137461_AddIdentityProperties.resx">
       <DependentUpon>201603082137461_AddIdentityProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsQuestions\201603261442294_ChangedAttributesTypes.resx">
+      <DependentUpon>201603261442294_ChangedAttributesTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\QMaze.Migrations.AddIdentityProperties.resources" />
     <EmbeddedResource Include="obj\Debug\QMaze.Migrations.InitialCreate.resources" />
@@ -290,7 +305,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10529</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:10169/</IISUrl>
+          <IISUrl>https://localhost:44302/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
