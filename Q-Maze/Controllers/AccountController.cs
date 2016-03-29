@@ -91,7 +91,7 @@ namespace QMaze.Controllers
             if (ModelState.IsValid)
             {
                 //Probably unnecessary to put int = 0 
-                var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, RegisterDate = DateTime.Now.Date, 
+                var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, RegisterDate = DateTime.Now, 
                     GamesPlayed = 0, GamesWon = 0, QuestionsCorrect = 0, QuestionsTotal = 0, HighScore = 0 };
                 IdentityResult result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
