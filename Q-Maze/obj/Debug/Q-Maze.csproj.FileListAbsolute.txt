@@ -115,3 +115,5 @@ C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.dll
 C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.pdb
 C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.MigrationsQuestions.InitialCreate.resources
 C:\Users\Ana\GitHub\Q-Maze\Q-Maze\obj\Debug\QMaze.MigrationsQuestions.ChangedAttributesTypes.resources
+C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\obj\Debug\QMaze.MigrationsQuestions.InitialCreate.resources
+C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\obj\Debug\QMaze.MigrationsQuestions.ChangedAttributesTypes.resources

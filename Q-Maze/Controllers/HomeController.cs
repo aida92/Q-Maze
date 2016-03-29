@@ -4,31 +4,28 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using QMaze.DataAccessLayer;
+using QMaze.Models;
 
 namespace QMaze.Controllers
 {
     [RequireHttps]
     public class HomeController : Controller
     {
+        
+        
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Statistics()
+        public ActionResult Statistics(string Id)
         {
-            //TO DO
-            string message = "Your high score : ";
-            
-            using (QuestionContext db = new QuestionContext())
+            if (Id == null || Id == "")
             {
-                foreach (var q in db.Questions)
-                    message += q.Text;
+                Id = "2fbb8918-4128-456c-9cab-4f0521e575ca";//TO DO
             }
-            
-            ViewBag.Message = message;
-
-            return View();
+            UserStatisticsModel model = new UserStatisticsModel(Id);
+            return View(model);
         }
     }
 }
