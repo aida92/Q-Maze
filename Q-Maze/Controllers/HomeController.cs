@@ -17,7 +17,7 @@ namespace QMaze.Controllers
         public ActionResult Statistics()
         {
             //TO DO
-            string message = "Testing : ";
+            string message = "Your high score : ";
             
             using (QuestionContext db = new QuestionContext())
             {
