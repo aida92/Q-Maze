@@ -7,6 +7,7 @@ using QMaze.DataAccessLayer;
 
 namespace QMaze.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()

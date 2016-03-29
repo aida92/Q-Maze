@@ -46,9 +46,9 @@ namespace QMaze
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "605413232943662",
+               appSecret: "e42f165ddc9a974db694b560eb6cdb01"); 
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
