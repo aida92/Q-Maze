@@ -9,7 +9,7 @@
    Hello, @User.Identity.Name!
 </p>
 
-<div>
+<div id="PlayerStatistics">
     <table class="table">
         <tr>
             <th>@Html.DisplayNameFor(Model => Model.AppUser.GamesPlayed)</th>
@@ -33,5 +33,9 @@
 <div>
     You have been playing since @Html.DisplayFor(Model => Model.AppUser.RegisterDate).
     Your high score is @Html.DisplayFor(Model => Model.AppUser.HighScore).
+</div>
+
+<div>
+    Click @Html.ActionLink("here", "Index") to go back to general statistics.
 </div>
 

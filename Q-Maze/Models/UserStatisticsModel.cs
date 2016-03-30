@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace QMaze.Models
 {
@@ -25,6 +26,7 @@ namespace QMaze.Models
             }
         }
 
+        [Display(Name="Percentage of games won")]
         public double SuccessRate
         {
             get

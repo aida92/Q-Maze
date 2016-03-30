@@ -1,14 +1,33 @@
-﻿
+﻿@model QMaze.Models.GameStatisticsModel
+
 @{
     ViewBag.Title = "Statistics";
 }
 
-<h2>Statistics</h2>
+<h2>Game statistics</h2>
 
 <p>
-    You have to be logged in to see individual statistics. 
+    You have to be logged in to see individual statistics. Click @Html.ActionLink("here", "Statistics", new { Id = "" }, null). 
 </p>
-<p>
-    Game statistics - to be continued...
-</p>
+<div id="PlayerList">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>High Score</th>
+            <th>Games played</th>
+            <th>Questions answered</th>
+        </tr>
+
+        @foreach (var m in Model.AppUsers)
+        {
+            <tr>
+                <td>@m.UserName</td>
+                <td>@m.HighScore</td>
+                <td>@m.GamesPlayed</td>
+                <td>@m.QuestionsTotal</td>                    
+        </tr>
+        }
+
+    </table>
+</div>
 

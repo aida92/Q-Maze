@@ -187,6 +187,7 @@
     <Compile Include="MigrationsIdentity\IdentityDbConfig.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\GameStatisticsModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\UserStatisticsModel.cs" />
