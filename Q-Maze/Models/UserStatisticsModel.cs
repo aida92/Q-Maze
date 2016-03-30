@@ -26,7 +26,7 @@ namespace QMaze.Models
             }
         }
 
-        [Display(Name="Percentage of games won")]
+        [Display(Name="Percentage won")]
         public double SuccessRate
         {
             get

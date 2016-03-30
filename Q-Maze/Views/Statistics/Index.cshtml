@@ -9,6 +9,14 @@
 <p>
     You have to be logged in to see individual statistics. Click @Html.ActionLink("here", "Statistics", new { Id = "" }, null). 
 </p>
+
+<div>
+    @Html.LabelFor(m => m.OrderBy)
+    @Html.DropDownListFor(m => m.OrderBy, new SelectList(Model.OrderBy))
+
+</div>
+
+
 <div id="PlayerList">
     <table class="table">
         <tr>
