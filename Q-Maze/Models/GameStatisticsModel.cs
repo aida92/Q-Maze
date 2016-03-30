@@ -10,9 +10,16 @@ namespace QMaze.Models
     {
         private ApplicationDbContext context = new ApplicationDbContext();
 
+        public Ordering Order
+        {
+            get;
+            set;
+        }
+
+        public enum Ordering {HighScore, GamesPlayed, GamesWon, QuestionsAttempted, QuestionsAnswered, RegisterDate};
         public IEnumerable<ApplicationUser> AppUsers { get; set; }
 
-        public IEnumerable<string> OrderBy
+        public IEnumerable<string> OrderBy //TO DO connect with refresh list?
         {
             get
             {
@@ -30,6 +37,22 @@ namespace QMaze.Models
         public GameStatisticsModel()
         {
             AppUsers = context.Users.ToList();
+            Order = Ordering.HighScore;
+        }
+
+        public void RefreshList()
+        {
+            switch (Order)
+            {
+                case Ordering.HighScore:    AppUsers = context.Users.OrderByDescending(x => x.HighScore).ToList();
+                    break;
+                case Ordering.GamesPlayed:  AppUsers = context.Users.OrderByDescending(x => x.GamesPlayed).ToList();
+                    break;
+                case Ordering.GamesWon:     AppUsers = context.Users.OrderByDescending(x => x.GamesWon).ToList();
+                    break;
+                default:                    AppUsers = context.Users.OrderByDescending(x => x.Id);
+                    break;
+            }
         }
     }
 }

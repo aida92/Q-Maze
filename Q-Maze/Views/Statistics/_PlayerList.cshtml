@@ -1,0 +1,24 @@
+﻿@model QMaze.Models.GameStatisticsModel
+
+
+<div id="PlayerList">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>High Score</th>
+            <th>Games played</th>
+            <th>Questions answered</th>
+        </tr>
+
+        @foreach (var m in Model.AppUsers)
+        {
+            <tr>
+                <td>@m.UserName</td>
+                <td>@m.HighScore</td>
+                <td>@m.GamesPlayed</td>
+                <td>@m.QuestionsTotal</td>
+            </tr>
+        }
+
+    </table>
+</div>
