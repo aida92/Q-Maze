@@ -9,19 +9,23 @@
    Hello, @User.Identity.Name!
 </p>
 
-<div>
-    <table>
+<div id="PlayerStatistics">
+    <table class="table">
         <tr>
             <th>@Html.DisplayNameFor(Model => Model.AppUser.GamesPlayed)</th>
             <th>@Html.DisplayNameFor(Model => Model.AppUser.GamesWon)</th>
             <th>@Html.DisplayNameFor(Model => Model.AppUser.QuestionsTotal)</th>
             <th>@Html.DisplayNameFor(Model => Model.AppUser.QuestionsCorrect)</th>
+            <th>@Html.DisplayNameFor(Model => Model.SuccessRate)</th>
+            <th>@Html.DisplayNameFor(Model => Model.Ranking)</th>
         </tr>
         <tr>
             <td>@Html.DisplayFor(Model => Model.AppUser.GamesPlayed)</td>
             <td>@Html.DisplayFor(Model => Model.AppUser.GamesWon)</td>
             <td>@Html.DisplayFor(Model => Model.AppUser.QuestionsTotal)</td>
             <td>@Html.DisplayFor(Model => Model.AppUser.QuestionsCorrect)</td>
+            <td>@Html.DisplayFor(Model => Model.SuccessRate)%</td>
+            <td>@Html.DisplayFor(Model => Model.Ranking)</td>
         </tr>
     </table>
 </div>
@@ -29,5 +33,9 @@
 <div>
     You have been playing since @Html.DisplayFor(Model => Model.AppUser.RegisterDate).
     Your high score is @Html.DisplayFor(Model => Model.AppUser.HighScore).
+</div>
+
+<div>
+    Click @Html.ActionLink("here", "Index") to go back to general statistics.
 </div>
 

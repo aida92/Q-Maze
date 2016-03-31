@@ -1,14 +1,62 @@
-﻿
+﻿@model QMaze.Models.GameStatisticsModel
+
 @{
     ViewBag.Title = "Statistics";
 }
 
-<h2>Statistics</h2>
+<h2>Game statistics</h2>
 
 <p>
-    You have to be logged in to see individual statistics. 
-</p>
-<p>
-    Game statistics - to be continued...
+    You have to be logged in to see individual statistics. Click @Html.ActionLink("here", "PlayerStatistics", new { Id = "" }, null).
 </p>
 
+<div>
+    <div>
+        @using (Ajax.BeginForm("RefreshList", "Statistics", new AjaxOptions()
+        {
+            UpdateTargetId = "PlayerList",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            LoadingElementId = "loading"
+
+        }))
+        {
+            @Html.LabelFor(m => m.OrderBy)
+            @Html.DropDownListFor(m => m.OrderBy, new SelectList(Model.OrderByList), "None")
+            @Html.LabelFor(m => m.Descending)
+            @Html.DropDownListFor(m => m.Descending, new SelectList(Model.OrderOptions, "Key", "Value"))
+        }
+        </div>
+    </div>
+
+    <div id="PlayerList">
+        @Html.Partial("_PlayerList", Model)
+    </div>
+
+    @section scripts {
+        <script type="text/javascript">
+            $("#OrderBy").change(function (event) {
+                $(this).parents("form").submit();
+            });
+            $("#OrderBy").keyup(function (event) {
+                $.ajax($(this).parents("form").attr("action"),
+                    {
+                        data: { OrderBy: $("#OrderBy").val() },
+                        method: "POST",
+                        beforeSend: function () {
+                            $("#loading").show();
+                        },
+                        complete: function () {
+                            $("#loading").hide();
+                        },
+                        success: function (data, status, xhr) {
+                            $("#PlayerList").html(data);
+                        },
+                        error: function (xhr, status, err) {
+                            $("#PlayerList").text(err);
+                        },
+                        dataType: "html"
+                    });
+            });
+        </script>
+    }

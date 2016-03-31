@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace QMaze.Models
 {
@@ -24,5 +25,26 @@ namespace QMaze.Models
                 return context.Users.Where(x => x.Id == this.Id).First();
             }
         }
+
+        [Display(Name="Percentage won")]
+        public double SuccessRate
+        {
+            get
+            {
+                if (AppUser.GamesPlayed != 0)
+                    return AppUser.GamesWon * 100.0 / AppUser.GamesPlayed;
+                else
+                    return 0;
+            }
+        }
+
+        public int Ranking
+        {
+            get
+            {
+                return context.Users.Where(x => x.HighScore > AppUser.HighScore).Count() + 1;
+            }
+        }
+
     }
 }
