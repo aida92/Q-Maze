@@ -10,16 +10,16 @@ namespace QMaze.Models
     {
         private ApplicationDbContext context = new ApplicationDbContext();
 
-        public Ordering Order
+        public string OrderBy
         {
             get;
             set;
         }
 
-        public enum Ordering {HighScore, GamesPlayed, GamesWon, QuestionsAttempted, QuestionsAnswered, RegisterDate};
+        public enum Ordering {HighScore, GamesPlayed, GamesWon, QuestionsAttempted, QuestionsAnswered, RegisterDate}; //?
         public IEnumerable<ApplicationUser> AppUsers { get; set; }
 
-        public IEnumerable<string> OrderBy //TO DO connect with refresh list?
+        public IEnumerable<string> OrderByList 
         {
             get
             {
@@ -37,18 +37,24 @@ namespace QMaze.Models
         public GameStatisticsModel()
         {
             AppUsers = context.Users.ToList();
-            Order = Ordering.HighScore;
+            OrderBy = "None";
         }
 
         public void RefreshList()
         {
-            switch (Order)
+            switch (OrderBy)
             {
-                case Ordering.HighScore:    AppUsers = context.Users.OrderByDescending(x => x.HighScore).ToList();
+                case "High score":          AppUsers = context.Users.OrderByDescending(x => x.HighScore).ToList();
                     break;
-                case Ordering.GamesPlayed:  AppUsers = context.Users.OrderByDescending(x => x.GamesPlayed).ToList();
+                case "Games played":        AppUsers = context.Users.OrderByDescending(x => x.GamesPlayed).ToList();
                     break;
-                case Ordering.GamesWon:     AppUsers = context.Users.OrderByDescending(x => x.GamesWon).ToList();
+                case "Games won":           AppUsers = context.Users.OrderByDescending(x => x.GamesWon).ToList();
+                    break;
+                case "Questions attempted": AppUsers = context.Users.OrderByDescending(x => x.QuestionsTotal).ToList();
+                    break;
+                case "Questions answered":  AppUsers = context.Users.OrderByDescending(x => x.QuestionsCorrect).ToList();
+                    break;
+                case "Date registered":     AppUsers = context.Users.OrderByDescending(x => x.RegisterDate).ToList();
                     break;
                 default:                    AppUsers = context.Users.OrderByDescending(x => x.Id);
                     break;
