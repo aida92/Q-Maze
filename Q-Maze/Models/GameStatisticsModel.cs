@@ -16,6 +16,15 @@ namespace QMaze.Models
             set;
         }
 
+        public IDictionary<bool, string> OrderOptions { get; set; }
+
+        [Display(Name="Pic of an arrow :)")]
+        public bool Descending
+        {
+            get;
+            set;
+        }
+
         public enum Ordering {HighScore, GamesPlayed, GamesWon, QuestionsAttempted, QuestionsAnswered, RegisterDate}; //?
         public IEnumerable<ApplicationUser> AppUsers { get; set; }
 
@@ -38,27 +47,55 @@ namespace QMaze.Models
         {
             AppUsers = context.Users.ToList();
             OrderBy = "None";
+            Descending = true;
+            OrderOptions = new Dictionary<bool, string>();
+            OrderOptions.Add(false, "ascending");
+            OrderOptions.Add(true, "descending");
         }
 
         public void RefreshList()
         {
-            switch (OrderBy)
+            if (Descending)
             {
-                case "High score":          AppUsers = context.Users.OrderByDescending(x => x.HighScore).ToList();
-                    break;
-                case "Games played":        AppUsers = context.Users.OrderByDescending(x => x.GamesPlayed).ToList();
-                    break;
-                case "Games won":           AppUsers = context.Users.OrderByDescending(x => x.GamesWon).ToList();
-                    break;
-                case "Questions attempted": AppUsers = context.Users.OrderByDescending(x => x.QuestionsTotal).ToList();
-                    break;
-                case "Questions answered":  AppUsers = context.Users.OrderByDescending(x => x.QuestionsCorrect).ToList();
-                    break;
-                case "Date registered":     AppUsers = context.Users.OrderByDescending(x => x.RegisterDate).ToList();
-                    break;
-                default:                    AppUsers = context.Users.OrderByDescending(x => x.Id);
-                    break;
+                switch (OrderBy)
+                {
+                    case "High score": AppUsers = context.Users.OrderByDescending(x => x.HighScore).ToList();
+                        break;
+                    case "Games played": AppUsers = context.Users.OrderByDescending(x => x.GamesPlayed).ToList();
+                        break;
+                    case "Games won": AppUsers = context.Users.OrderByDescending(x => x.GamesWon).ToList();
+                        break;
+                    case "Questions attempted": AppUsers = context.Users.OrderByDescending(x => x.QuestionsTotal).ToList();
+                        break;
+                    case "Questions answered": AppUsers = context.Users.OrderByDescending(x => x.QuestionsCorrect).ToList();
+                        break;
+                    case "Date registered": AppUsers = context.Users.OrderByDescending(x => x.RegisterDate).ToList();
+                        break;
+                    default: AppUsers = context.Users.OrderByDescending(x => x.Id);
+                        break;
+                }
             }
+            else
+            {
+                switch (OrderBy)
+                {
+                    case "High score": AppUsers = context.Users.OrderBy(x => x.HighScore);
+                        break;
+                    case "Games played": AppUsers = context.Users.OrderBy(x => x.GamesPlayed).ToList();
+                        break;
+                    case "Games won": AppUsers = context.Users.OrderBy(x => x.GamesWon).ToList();
+                        break;
+                    case "Questions attempted": AppUsers = context.Users.OrderBy(x => x.QuestionsTotal).ToList();
+                        break;
+                    case "Questions answered": AppUsers = context.Users.OrderBy(x => x.QuestionsCorrect).ToList();
+                        break;
+                    case "Date registered": AppUsers = context.Users.OrderBy(x => x.RegisterDate).ToList();
+                        break;
+                    default: AppUsers = context.Users.OrderBy(x => x.Id);
+                        break;
+                }
+            }
+            
         }
     }
 }
