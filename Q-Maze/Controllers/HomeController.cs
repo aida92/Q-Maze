@@ -19,6 +19,10 @@ namespace QMaze.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
         
     }
 }

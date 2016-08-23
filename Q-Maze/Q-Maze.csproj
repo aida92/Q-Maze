@@ -208,6 +208,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\fb.png" />
     <Content Include="Images\maze.png" />
     <Content Include="obj\Debug\Q-Maze.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Q-Maze.dll" />
@@ -266,6 +267,7 @@
     <Content Include="web\web.unity3d" />
     <Content Include="Views\Statistics\Index.cshtml" />
     <Content Include="Views\Statistics\_PlayerList.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />

@@ -22,7 +22,17 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Statistics", "Index", "Statistics")</li>
+                    <li>@Html.ActionLink("About us", "About", "Home")</li>
+                    <li>@Html.ActionLink("Statistics", "Index", "Statistics")</li>                    
+                    
+                </ul>
+
+                <ul class="nav navbar-right">
+                    <li class="">
+                        <a href="https://www.facebook.com/" target="_blank" data-toggle="tooltip" title="Q-Maze on Facebook">
+                            <img src="~/Images/fb.png" alt="Facebook" style="width:30px;height:30px;border:0;">
+                        </a>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
