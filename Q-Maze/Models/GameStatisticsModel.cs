@@ -46,7 +46,7 @@ namespace QMaze.Models
         public GameStatisticsModel()
         {
             AppUsers = context.Users.ToList();
-            OrderBy = "None";
+            OrderBy = "None"; //default ordering: by userId
             Descending = true;
             OrderOptions = new Dictionary<bool, string>();
             OrderOptions.Add(false, "ascending");
@@ -75,7 +75,7 @@ namespace QMaze.Models
                         break;
                 }
             }
-            else
+            else // ascending
             {
                 switch (OrderBy)
                 {

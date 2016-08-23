@@ -26,37 +26,64 @@
             @Html.LabelFor(m => m.Descending)
             @Html.DropDownListFor(m => m.Descending, new SelectList(Model.OrderOptions, "Key", "Value"))
         }
-        </div>
     </div>
+</div>
 
-    <div id="PlayerList">
-        @Html.Partial("_PlayerList", Model)
-    </div>
+<div id="PlayerList">
+    @Html.Partial("_PlayerList", Model)
+</div>
 
-    @section scripts {
-        <script type="text/javascript">
-            $("#OrderBy").change(function (event) {
-                $(this).parents("form").submit();
-            });
-            $("#OrderBy").keyup(function (event) {
-                $.ajax($(this).parents("form").attr("action"),
-                    {
-                        data: { OrderBy: $("#OrderBy").val() },
-                        method: "POST",
-                        beforeSend: function () {
-                            $("#loading").show();
-                        },
-                        complete: function () {
-                            $("#loading").hide();
-                        },
-                        success: function (data, status, xhr) {
-                            $("#PlayerList").html(data);
-                        },
-                        error: function (xhr, status, err) {
-                            $("#PlayerList").text(err);
-                        },
-                        dataType: "html"
-                    });
-            });
-        </script>
-    }
+@section scripts
+    {
+    <script type="text/javascript">
+        $("#OrderBy").change(function (event) {
+            $(this).parents("form").submit();
+        });
+        $("#OrderBy").keyup(function (event) {
+            $.ajax($(this).parents("form").attr("action"),
+                {
+                    data: { OrderBy: $("#OrderBy").val() },
+                    method: "POST",
+                    beforeSend: function () {
+                        $("#loading").show();
+                    },
+                    complete: function () {
+                        $("#loading").hide();
+                    },
+                    success: function (data, status, xhr) {
+                        $("#PlayerList").html(data);
+                    },
+                    error: function (xhr, status, err) {
+                        $("#PlayerList").text(err);
+                    },
+                    dataType: "html"
+                });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $("#Descending").change(function (event) {
+            $(this).parents("form").submit();
+        });
+        $("#Descending").keyup(function (event) {
+            $.ajax($(this).parents("form").attr("action"),
+                {
+                    data: { OrderBy: $("#Descending").val() },
+                    method: "POST",
+                    beforeSend: function () {
+                        $("#loading").show();
+                    },
+                    complete: function () {
+                        $("#loading").hide();
+                    },
+                    success: function (data, status, xhr) {
+                        $("#PlayerList").html(data);
+                    },
+                    error: function (xhr, status, err) {
+                        $("#PlayerList").text(err);
+                    },
+                    dataType: "html"
+                });
+        });
+    </script>
+}
