@@ -10,6 +10,19 @@
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+
+        <li>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle badge" type="button" data-toggle="dropdown">
+                    Language
+                    <span class="caret"></span>
+                </button>
+                <ul class="nav dropdown-menu">
+                    <li>@Html.ActionLink("English", "Change", "Home", new { LanguageAbbreviation = "en" }, null)</li>
+                    <li>@Html.ActionLink("Français", "Change", "Home", new { LanguageAbbreviation = "fr" }, null)</li>
+                </ul>
+            </div>
+        </li>              
     </ul>
     }
 }
@@ -18,5 +31,20 @@ else
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+
+        <li>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle badge" type="button" data-toggle="dropdown">
+                    Language
+                    <span class="caret"></span>
+                </button>
+                <ul class="nav dropdown-menu">
+                    <li>@Html.ActionLink("English", "Change", "Home", new { LanguageAbbreviation = "en" }, null)</li>
+                    <li>@Html.ActionLink("Français", "Change", "Home", new { LanguageAbbreviation = "fr" }, null)</li>
+                </ul>
+            </div>
+        </li>                
     </ul>
 }
+
+
