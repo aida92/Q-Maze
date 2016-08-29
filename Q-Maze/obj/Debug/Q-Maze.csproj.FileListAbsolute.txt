@@ -53,7 +53,6 @@ C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\bin\Microsoft.
 C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\obj\Debug\Q-Maze.csprojResolveAssemblyReference.cache
 C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\obj\Debug\QMaze.dll
 C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\obj\Debug\QMaze.pdb
 C:\Users\Ana\GitHub\Q-Maze\Q-Maze\bin\QMaze.dll.config
@@ -183,3 +182,7 @@ C:\Users\Ana\Source\Repos\Q-Maze2\Q-Maze\obj\Debug\Q-Maze.csproj.GenerateResourc
 C:\Users\Ana\Source\Repos\Q-Maze2\Q-Maze\obj\Debug\fr\QMaze.resources.dll
 C:\Users\Ana\Source\Repos\Q-Maze2\Q-Maze\obj\Debug\QMaze.dll
 C:\Users\Ana\Source\Repos\Q-Maze2\Q-Maze\obj\Debug\QMaze.pdb
+C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\obj\Debug\Q-Maze.csprojResolveAssemblyReference.cache
+C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\bin\de\QMaze.resources.dll
+C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\obj\Debug\QMaze.Resources.HomeTexts.de.resources
+C:\Users\Aida\Documents\Visual Studio 2013\Projects\Q-Maze\Q-Maze\obj\Debug\de\QMaze.resources.dll

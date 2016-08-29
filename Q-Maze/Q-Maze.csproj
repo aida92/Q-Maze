@@ -167,6 +167,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\BootstrapHtml.cs" />
     <Compile Include="MigrationsQuestions\201603182218004_InitialCreate.cs" />
     <Compile Include="MigrationsQuestions\201603182218004_InitialCreate.Designer.cs">
       <DependentUpon>201603182218004_InitialCreate.cs</DependentUpon>
@@ -195,6 +196,11 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\HomeTexts.de.Designer.cs">
+      <DependentUpon>HomeTexts.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Resources\HomeTexts.fr.Designer.cs">
       <DependentUpon>HomeTexts.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -212,8 +218,10 @@
     <Content Include="App_Data\aspnet-Q-Maze-20160308095759_log.ldf">
       <DependentUpon>aspnet-Q-Maze-20160308095759.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\body.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\navbar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -305,6 +313,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\QMaze.Migrations.AddIdentityProperties.resources" />
     <EmbeddedResource Include="obj\Debug\QMaze.Migrations.InitialCreate.resources" />
+    <EmbeddedResource Include="Resources\HomeTexts.de.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeTexts.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\HomeTexts.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>HomeTexts.fr.Designer.cs</LastGenOutput>

@@ -10,6 +10,7 @@ namespace QMaze.Models
     {
         private ApplicationDbContext context = new ApplicationDbContext();
 
+        [Display(Name = "Order by")]
         public string OrderBy
         {
             get;
@@ -18,7 +19,7 @@ namespace QMaze.Models
 
         public IDictionary<bool, string> OrderOptions { get; set; }
 
-        [Display(Name="Pic of an arrow :)")]
+        [Display(Name="Asc/Desc")]
         public bool Descending
         {
             get;

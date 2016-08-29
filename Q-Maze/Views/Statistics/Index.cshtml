@@ -4,33 +4,48 @@
     ViewBag.Title = "Statistics";
 }
 
-<h2>Game statistics</h2>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Statistics</div>
+    <div class="panel-body">
 
-<p>
-    You have to be logged in to see individual statistics. Click @Html.ActionLink("here", "PlayerStatistics", new { Id = "" }, null).
-</p>
+        <div>
+            <div>
+                @using (Ajax.BeginForm("RefreshList", "Statistics", new AjaxOptions()
+                {
+                    UpdateTargetId = "PlayerList",
+                    InsertionMode = InsertionMode.Replace,
+                    HttpMethod = "POST",
+                    LoadingElementId = "loading"
 
-<div>
-    <div>
-        @using (Ajax.BeginForm("RefreshList", "Statistics", new AjaxOptions()
-        {
-            UpdateTargetId = "PlayerList",
-            InsertionMode = InsertionMode.Replace,
-            HttpMethod = "POST",
-            LoadingElementId = "loading"
+                }))
+                {
+                    <div class="row">
+                        <div class="col-sm-1">@Html.LabelFor(m => m.OrderBy)</div>
+                        <div class="col-sm-2">@Html.DropDownListFor(m => m.OrderBy, new SelectList(Model.OrderByList), "None")</div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-1">@Html.LabelFor(m => m.Descending)</div>
+                        <div class="col-sm-2">@Html.DropDownListFor(m => m.Descending, new SelectList(Model.OrderOptions, "Key", "Value"))</div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                }
+            </div>
+        </div>
 
-        }))
-        {
-            @Html.LabelFor(m => m.OrderBy)
-            @Html.DropDownListFor(m => m.OrderBy, new SelectList(Model.OrderByList), "None")
-            @Html.LabelFor(m => m.Descending)
-            @Html.DropDownListFor(m => m.Descending, new SelectList(Model.OrderOptions, "Key", "Value"))
-        }
     </div>
-</div>
 
-<div id="PlayerList">
-    @Html.Partial("_PlayerList", Model)
+    <!-- Table -->
+
+
+    <div id="PlayerList">
+        @Html.Partial("_PlayerList", Model)
+    </div>
+
+
+    <!-- Footer panel contents -->
+    <div class="panel-footer">
+        <p>Click @Html.ActionLink("here", "PlayerStatistics", new { Id = "" }, null) to see individual statistics.</p>
+    </div>
 </div>
 
 @section scripts

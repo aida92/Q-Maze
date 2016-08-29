@@ -118,33 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>Sur</value>
+    <value>Über uns</value>
   </data>
   <data name="Hello" xml:space="preserve">
-    <value>Salut </value>
+    <value>Hallo</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Accueil</value>
+    <value>Startseite</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Langue</value>
+    <value>Sprache</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Connexion</value>
+    <value>Anmelden</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Déconnexion</value>
+    <value>Abmelden</value>
   </data>
   <data name="Play" xml:space="preserve">
-    <value>Jouer!</value>
+    <value>Spiel!</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Inscription</value>
+    <value>Registrieren</value>
   </data>
   <data name="Statistics" xml:space="preserve">
-    <value>Statistiques</value>
+    <value>Statistiken</value>
   </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Bienvenue</value>
+    <value>Willkomme</value>
   </data>
 </root>

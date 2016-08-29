@@ -4,9 +4,8 @@
     ViewBag.Title = "Error";
 }
 
-<h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
-<h2>Error message: @ViewBag.Message!</h2>
-<h2>@Html.ActionLink("Back", "Index", "Home")</h2>
+<h2>@ViewBag.Message!</h2>
+<h2>@Html.ActionLink("Home", "Index", "Home")</h2>
 

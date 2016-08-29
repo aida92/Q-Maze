@@ -46,5 +46,14 @@ namespace QMaze.Models
             }
         }
 
+
+        public int MemberFor
+        {
+            get
+            {
+                return (DateTime.Today - AppUser.RegisterDate).Days;
+            }
+        }
+
     }
 }

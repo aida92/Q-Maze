@@ -33,7 +33,8 @@ namespace QMaze.Controllers
         public ActionResult PlayerStatistics(string Id)
         {
             if (!User.Identity.IsAuthenticated)
-                return RedirectToAction("Index");
+                return Error("You have to be logged in to access individual statistics");
+
             if (Id == null || Id == "")
             {
                 Id = AppUser.Id;
