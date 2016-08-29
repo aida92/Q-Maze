@@ -15,6 +15,8 @@ namespace QMaze.Models
         public virtual ICollection<Question> Questions { get; set; }
         public virtual ApplicationUser Player1 { get; set; }
         public virtual ApplicationUser Player2 { get; set; }
+         * 
+         * enum Resolution {get, set} -- dropDownListFor
          * */
 
     }

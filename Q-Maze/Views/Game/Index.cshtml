@@ -1,17 +1,35 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Play!";
 }
 
-<h2>Q-Maze</h2>
+<div class="jumbotron">
+    <div class="col-md-8">
+       
+        <a href="~/web/web.html" target="_blank">Start playing!</a>
+    </div>
 
-<div>
-    Note: Make the link a picture <br /> 
-    <a href="~/web/web.html" target="_blank">Start playing!</a>
+    <div class="col-md-4">
+        @using (Html.BeginForm("", "", FormMethod.Post))
+        {
+
+            var items = new List<SelectListItem>()
+            {
+                new SelectListItem() { Text = "res 1", Value = "#" },
+                new SelectListItem() { Text = "res 2", Value = "#" },
+            };
+
+            @Html.DropDownList("Name", items, "Choose resolution", new { @class = "form-control" })
+        }
+    </div>
 </div>
 
-<div class="jumbotron">
-   Rules:
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Rules</h3>
+    </div>
+    <div class="panel-body">
+        ...
+    </div>
 </div>
 
 

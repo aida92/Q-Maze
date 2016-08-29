@@ -1,4 +1,5 @@
 ﻿.navbar-inverse {
+  background-image: url(/Images/navbar.png);
   background-color: #25470b;
   border-color: #769712;
 }

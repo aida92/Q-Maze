@@ -70,7 +70,7 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hello .
+        ///   Looks up a localized string similar to Hello.
         /// </summary>
         public static string Hello {
             get {

@@ -6,13 +6,13 @@
 
 <div class="panel panel-default">
     <!-- Default panel contents -->
-    <div class="panel-heading">Hello, @User.Identity.Name!</div>
+    <div class="panel-heading"><h2>@Html.Raw(QMaze.Resources.HomeTexts.Hello), @User.Identity.Name!</h2></div>
     <div class="panel-body">
        <p>TO DO Display results for last month, year, everything</p>
     </div>
 
     <!-- Table -->
-    <div id="PlayerStatistics">
+    <div class="table-responsive" id="PlayerStatistics">
         <table class="table">
             <tr>
                 <th>@Html.DisplayNameFor(Model => Model.AppUser.GamesPlayed)</th>
