@@ -12,24 +12,28 @@
     </div>
 
     <!-- Table -->
-    <div class="table-responsive" id="PlayerStatistics">
-        <table class="table">
-            <tr>
-                <th>@Html.DisplayNameFor(Model => Model.AppUser.GamesPlayed)</th>
-                <th>@Html.DisplayNameFor(Model => Model.AppUser.GamesWon)</th>
-                <th>@Html.DisplayNameFor(Model => Model.AppUser.QuestionsTotal)</th>
-                <th>@Html.DisplayNameFor(Model => Model.AppUser.QuestionsCorrect)</th>
-                <th>@Html.DisplayNameFor(Model => Model.SuccessRate)</th>
-                <th>@Html.DisplayNameFor(Model => Model.Ranking)</th>
-            </tr>
-            <tr>
-                <td>@Html.DisplayFor(Model => Model.AppUser.GamesPlayed)</td>
-                <td>@Html.DisplayFor(Model => Model.AppUser.GamesWon)</td>
-                <td>@Html.DisplayFor(Model => Model.AppUser.QuestionsTotal)</td>
-                <td>@Html.DisplayFor(Model => Model.AppUser.QuestionsCorrect)</td>
-                <td>@Html.DisplayFor(Model => Model.SuccessRate)%</td>
-                <td>@Html.DisplayFor(Model => Model.Ranking)</td>
-            </tr>
+    <div id="PlayerStatistics">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(Model => Model.AppUser.GamesPlayed)</th>
+                    <th>@Html.DisplayNameFor(Model => Model.AppUser.GamesWon)</th>
+                    <th>@Html.DisplayNameFor(Model => Model.AppUser.QuestionsTotal)</th>
+                    <th>@Html.DisplayNameFor(Model => Model.AppUser.QuestionsCorrect)</th>
+                    <th>@Html.DisplayNameFor(Model => Model.SuccessRate)</th>
+                    <th>@Html.DisplayNameFor(Model => Model.Ranking)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Html.DisplayFor(Model => Model.AppUser.GamesPlayed)</td>
+                    <td>@Html.DisplayFor(Model => Model.AppUser.GamesWon)</td>
+                    <td>@Html.DisplayFor(Model => Model.AppUser.QuestionsTotal)</td>
+                    <td>@Html.DisplayFor(Model => Model.AppUser.QuestionsCorrect)</td>
+                    <td>@Html.DisplayFor(Model => Model.SuccessRate)%</td>
+                    <td>@Html.DisplayFor(Model => Model.Ranking)</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 

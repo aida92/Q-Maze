@@ -6,3 +6,29 @@
 
 
 }
+
+.panel-default > .panel-heading, .panel-footer {
+    background-color: #ebc9ad;
+}
+
+.panel-default > .panel-body {
+    background-color: #faf1ea;
+}
+
+
+.jumbotron {
+    background-color: #faf1ea;
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+    background-color: #ebc9ad;
+}
+
+.table-hover thead {
+    background-color: #f5e3d6
+}
+
+.table {
+    background-color: #faf1ea;
+}

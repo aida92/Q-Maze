@@ -167,7 +167,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\BootstrapHtml.cs" />
     <Compile Include="MigrationsQuestions\201603182218004_InitialCreate.cs" />
     <Compile Include="MigrationsQuestions\201603182218004_InitialCreate.Designer.cs">
       <DependentUpon>201603182218004_InitialCreate.cs</DependentUpon>
@@ -191,6 +190,7 @@
     <Compile Include="Models\GameStatisticsModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\StartGameModel.cs" />
     <Compile Include="Models\UserStatisticsModel.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -221,6 +221,7 @@
     <Content Include="Content\body.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\carousel.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -240,7 +241,6 @@
     <Content Include="obj\Debug\Q-Maze.csproj.GenerateResource.Cache" />
     <Content Include="obj\Debug\Q-Maze.csprojResolveAssemblyReference.cache" />
     <Content Include="web\web.html" />
-    <Content Include="Images\labOnText.pdf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -289,10 +289,10 @@
     <Content Include="Views\Statistics\Index.cshtml" />
     <Content Include="Views\Statistics\_PlayerList.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Game\Start.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\Language\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

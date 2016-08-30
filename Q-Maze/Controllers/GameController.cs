@@ -14,5 +14,12 @@ namespace QMaze.Controllers
             return View();
         }
 
+        
+        public ActionResult Start()
+        {
+            // TO DO add resolution, player ID etc ?
+            return View();
+        }
+
     }
 }

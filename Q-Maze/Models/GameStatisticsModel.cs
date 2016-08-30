@@ -19,17 +19,17 @@ namespace QMaze.Models
 
         public IDictionary<bool, string> OrderOptions { get; set; }
 
-        [Display(Name="Asc/Desc")]
+        [Display(Name = "Asc/Desc")]
         public bool Descending
         {
             get;
             set;
         }
 
-        public enum Ordering {HighScore, GamesPlayed, GamesWon, QuestionsAttempted, QuestionsAnswered, RegisterDate}; //?
+        public enum Ordering { HighScore, GamesPlayed, GamesWon, QuestionsAttempted, QuestionsAnswered, RegisterDate }; //?
         public IEnumerable<ApplicationUser> AppUsers { get; set; }
 
-        public IEnumerable<string> OrderByList 
+        public IEnumerable<string> OrderByList
         {
             get
             {
@@ -96,7 +96,7 @@ namespace QMaze.Models
                         break;
                 }
             }
-            
+
         }
     }
 }

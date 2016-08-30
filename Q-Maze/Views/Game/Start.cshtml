@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Play";
+}
+
+<div class="jumbotron">
+    <div class="container">
+
+        <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
+                width="860" height="450"
+                codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
+            <param name="~/web/web.unity3d" value="web.unity3d" />
+            <embed id="UnityEmbed" src="~/web/web.unity3d" width="600" height="450"
+                   type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
+        </object>
+
+    </div>
+</div>
+

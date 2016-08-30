@@ -115,7 +115,7 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Play the game!.
+        ///   Looks up a localized string similar to Play!.
         /// </summary>
         public static string Play {
             get {

@@ -16,4 +16,8 @@ textarea {
     max-width: 280px;
 }
 
-
+.center {
+  margin: 0 auto;
+  width: 400px;
+  padding: 20px;
+}
