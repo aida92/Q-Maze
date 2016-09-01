@@ -70,11 +70,38 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Games played.
+        /// </summary>
+        public static string GamesPlayed {
+            get {
+                return ResourceManager.GetString("GamesPlayed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Games won.
+        /// </summary>
+        public static string GamesWon {
+            get {
+                return ResourceManager.GetString("GamesWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello.
         /// </summary>
         public static string Hello {
             get {
                 return ResourceManager.GetString("Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to High score.
+        /// </summary>
+        public static string Highscore {
+            get {
+                return ResourceManager.GetString("Highscore", resourceCulture);
             }
         }
         
@@ -124,6 +151,15 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Correct answers.
+        /// </summary>
+        public static string QuestionsAnswered {
+            get {
+                return ResourceManager.GetString("QuestionsAnswered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
         public static string Register {
@@ -138,6 +174,15 @@ namespace QMaze.Resources {
         public static string Statistics {
             get {
                 return ResourceManager.GetString("Statistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        public static string Username {
+            get {
+                return ResourceManager.GetString("Username", resourceCulture);
             }
         }
         

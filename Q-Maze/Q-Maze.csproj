@@ -232,6 +232,7 @@
     <Content Include="Images\maze.png" />
     <Content Include="Images\navbar.png" />
     <Content Include="Images\twitter.png" />
+    <Content Include="MyScripts\TalkToUnity.js" />
     <Content Include="obj\Debug\Q-Maze.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Q-Maze.dll" />
     <Content Include="obj\Debug\Q-Maze.pdb" />

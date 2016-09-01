@@ -10,10 +10,23 @@
                 width="860" height="450"
                 codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
             <param name="~/web/web.unity3d" value="web.unity3d" />
+
+            <param name="backgroundcolor" value="25470b" />
+            <param name="bordercolor" value="769712" />
+            <param name="textcolor" value="c27230" />
+            <param name="logoimage" value="~\favicon.png" />
+
+
             <embed id="UnityEmbed" src="~/web/web.unity3d" width="600" height="450"
-                   type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
+                   type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x"
+                   backgroundcolor="25470b" bordercolor="769712" textcolor="c27230" logoimage="~\favicon.png" />
         </object>
 
     </div>
 </div>
+
+<script src="~/MyScripts/TalkToUnity.js"></script>
+<script>SaySomethingToUnity("Working?");</script>
+
+
 

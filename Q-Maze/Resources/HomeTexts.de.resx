@@ -120,8 +120,17 @@
   <data name="About" xml:space="preserve">
     <value>Über uns</value>
   </data>
+  <data name="GamesPlayed" xml:space="preserve">
+    <value>Spiele gespielt</value>
+  </data>
+  <data name="GamesWon" xml:space="preserve">
+    <value>Spiele gewonnen</value>
+  </data>
   <data name="Hello" xml:space="preserve">
     <value>Hallo</value>
+  </data>
+  <data name="Highscore" xml:space="preserve">
+    <value>Highscore</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Startseite</value>
@@ -138,13 +147,19 @@
   <data name="Play" xml:space="preserve">
     <value>Spiel!</value>
   </data>
+  <data name="QuestionsAnswered" xml:space="preserve">
+    <value>Richtige Antworten</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Registrieren</value>
   </data>
   <data name="Statistics" xml:space="preserve">
     <value>Statistiken</value>
   </data>
+  <data name="Username" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Willkomme</value>
+    <value>Willkommen</value>
   </data>
 </root>
