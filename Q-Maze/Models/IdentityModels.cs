@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace QMaze.Models
 {
@@ -17,12 +18,29 @@ namespace QMaze.Models
             return userIdentity;
         }
 
+        [Display(Name = "HighScore", ResourceType=typeof(Resources.HomeTexts))]
         public virtual int HighScore { get; set; }
+        [Display(Name = "GamesPlayed", ResourceType = typeof(Resources.HomeTexts))]
         public virtual int GamesPlayed { get; set; }
+        [Display(Name = "GamesWon", ResourceType = typeof(Resources.HomeTexts))]
         public virtual int GamesWon { get; set; }
+        [Display(Name = "QuestionsAttempted", ResourceType = typeof(Resources.HomeTexts))]
         public virtual int QuestionsTotal { get; set; } //total number of questions attempted in all games
+        [Display(Name = "QuestionsAnswered", ResourceType = typeof(Resources.HomeTexts))]
         public virtual int QuestionsCorrect { get; set; } //total number of correct answers in all games
-        public virtual DateTime RegisterDate { get; set; } 
+        
+        public virtual DateTime RegisterDate { get; set; }
+
+        [Display(Name = "HighScore", ResourceType = typeof(Resources.HomeTexts))]
+        public virtual string FormattedRegDate 
+        {
+            get
+            {
+                return RegisterDate.ToShortDateString(); // formatted according to chosen language
+            }
+        }
+
+        //public virtual string Token { get; set; } // for SfS2x DB integration, see: http://smartfoxserver.com/blog/integrate-a-website-login-with-smartfoxserver/
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

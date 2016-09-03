@@ -70,6 +70,15 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Asc/Desc.
+        /// </summary>
+        public static string AscDesc {
+            get {
+                return ResourceManager.GetString("AscDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Games played.
         /// </summary>
         public static string GamesPlayed {
@@ -93,6 +102,15 @@ namespace QMaze.Resources {
         public static string Hello {
             get {
                 return ResourceManager.GetString("Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to here.
+        /// </summary>
+        public static string Here {
+            get {
+                return ResourceManager.GetString("Here", resourceCulture);
             }
         }
         
@@ -142,6 +160,15 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Order by.
+        /// </summary>
+        public static string OrderBy {
+            get {
+                return ResourceManager.GetString("OrderBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Play!.
         /// </summary>
         public static string Play {
@@ -156,6 +183,33 @@ namespace QMaze.Resources {
         public static string QuestionsAnswered {
             get {
                 return ResourceManager.GetString("QuestionsAnswered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Questions attempted.
+        /// </summary>
+        public static string QuestionsAttempted {
+            get {
+                return ResourceManager.GetString("QuestionsAttempted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rank.
+        /// </summary>
+        public static string Rank {
+            get {
+                return ResourceManager.GetString("Rank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register date.
+        /// </summary>
+        public static string RegDate {
+            get {
+                return ResourceManager.GetString("RegDate", resourceCulture);
             }
         }
         

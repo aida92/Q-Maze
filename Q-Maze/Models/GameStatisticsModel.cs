@@ -10,7 +10,7 @@ namespace QMaze.Models
     {
         private ApplicationDbContext context = new ApplicationDbContext();
 
-        [Display(Name = "Order by")]
+        [Display(Name = "OrderBy", ResourceType = typeof(Resources.HomeTexts))]
         public string OrderBy
         {
             get;
@@ -19,7 +19,7 @@ namespace QMaze.Models
 
         public IDictionary<bool, string> OrderOptions { get; set; }
 
-        [Display(Name = "Asc/Desc")]
+        [Display(Name = "AscDesc", ResourceType = typeof(Resources.HomeTexts))]
         public bool Descending
         {
             get;
@@ -34,12 +34,13 @@ namespace QMaze.Models
             get
             {
                 List<string> list = new List<string>();
-                list.Add("High score");
-                list.Add("Games played");
-                list.Add("Games won");
-                list.Add("Questions attempted");
-                list.Add("Questions answered");
-                list.Add("Date registered");
+                list.Add(QMaze.Resources.HomeTexts.Highscore);
+                list.Add(QMaze.Resources.HomeTexts.GamesPlayed);
+                list.Add(QMaze.Resources.HomeTexts.GamesWon);
+                list.Add(QMaze.Resources.HomeTexts.QuestionsAttempted);
+                list.Add(QMaze.Resources.HomeTexts.QuestionsAnswered);
+                //list.Add(QMaze.Resources.HomeTexts.RegDate);  
+                // TO DO : figure out why its sorting weird by date :)
                 return list;
             }
         }
@@ -47,7 +48,7 @@ namespace QMaze.Models
         public GameStatisticsModel()
         {
             AppUsers = context.Users.ToList();
-            OrderBy = "None"; //default ordering: by userId
+            OrderBy = "none"; //default ordering: by id
             Descending = true;
             OrderOptions = new Dictionary<bool, string>();
             OrderOptions.Add(false, "ascending");
@@ -70,8 +71,8 @@ namespace QMaze.Models
                         break;
                     case "Questions answered": AppUsers = context.Users.OrderByDescending(x => x.QuestionsCorrect).ToList();
                         break;
-                    case "Date registered": AppUsers = context.Users.OrderByDescending(x => x.RegisterDate).ToList();
-                        break;
+                    //case "Date registered": AppUsers = context.Users.OrderByDescending(x => x.RegisterDate).ToList();
+                    //    break;
                     default: AppUsers = context.Users.OrderByDescending(x => x.Id);
                         break;
                 }
@@ -90,8 +91,8 @@ namespace QMaze.Models
                         break;
                     case "Questions answered": AppUsers = context.Users.OrderBy(x => x.QuestionsCorrect).ToList();
                         break;
-                    case "Date registered": AppUsers = context.Users.OrderBy(x => x.RegisterDate).ToList();
-                        break;
+                    //case "Date registered": AppUsers = context.Users.OrderBy(x => x.RegisterDate).ToList();
+                    //    break;
                     default: AppUsers = context.Users.OrderBy(x => x.Id);
                         break;
                 }

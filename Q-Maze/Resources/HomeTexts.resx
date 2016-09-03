@@ -120,6 +120,9 @@
   <data name="About" xml:space="preserve">
     <value>About us</value>
   </data>
+  <data name="AscDesc" xml:space="preserve">
+    <value>Asc/Desc</value>
+  </data>
   <data name="GamesPlayed" xml:space="preserve">
     <value>Games played</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="Hello" xml:space="preserve">
     <value>Hello</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>here</value>
   </data>
   <data name="Highscore" xml:space="preserve">
     <value>High score</value>
@@ -144,11 +150,23 @@
   <data name="Logout" xml:space="preserve">
     <value>Log out</value>
   </data>
+  <data name="OrderBy" xml:space="preserve">
+    <value>Order by</value>
+  </data>
   <data name="Play" xml:space="preserve">
     <value>Play!</value>
   </data>
   <data name="QuestionsAnswered" xml:space="preserve">
     <value>Correct answers</value>
+  </data>
+  <data name="QuestionsAttempted" xml:space="preserve">
+    <value>Questions attempted</value>
+  </data>
+  <data name="Rank" xml:space="preserve">
+    <value>Rank</value>
+  </data>
+  <data name="RegDate" xml:space="preserve">
+    <value>Register date</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>

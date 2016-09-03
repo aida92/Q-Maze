@@ -8,7 +8,8 @@
                 <th>@Html.Raw(QMaze.Resources.HomeTexts.Username)</th>
                 <th>@Html.Raw(QMaze.Resources.HomeTexts.Highscore)</th>
                 <th>@Html.Raw(QMaze.Resources.HomeTexts.GamesPlayed)</th>
-                <th>@Html.Raw(QMaze.Resources.HomeTexts.QuestionsAnswered)</th>
+                <th>@Html.Raw(QMaze.Resources.HomeTexts.GamesWon)</th>
+                <th>@Html.Raw(QMaze.Resources.HomeTexts.RegDate)</th>
             </tr>
         </thead>
 
@@ -19,7 +20,8 @@
                     <td>@m.UserName</td>
                     <td>@m.HighScore</td>
                     <td>@m.GamesPlayed</td>
-                    <td>@m.QuestionsTotal</td>
+                    <td>@m.GamesWon</td>
+                    <td>@m.FormattedRegDate</td>
                 </tr>
             }
         </tbody>

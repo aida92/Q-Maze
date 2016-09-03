@@ -38,6 +38,7 @@ namespace QMaze.Models
             }
         }
 
+        [Display(Name = "Rank", ResourceType = typeof(Resources.HomeTexts))]
         public int Ranking
         {
             get
