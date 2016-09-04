@@ -6,7 +6,33 @@
 <div class="jumbotron">
     <div class="container">
 
-        <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
+        <link rel="stylesheet" href="~/unityBuild/TemplateData/style.css">
+
+        <div class="template">
+            <div class="template-wrap clear">
+                <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+                <br>
+                <div class="logo"></div>
+                <div class="fullscreen"><img src="~/unityBuild/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+                <div class="title">QMaze</div>
+            </div>
+            <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+            <script type='text/javascript'>
+                var Module = {
+                    TOTAL_MEMORY: 268435456,
+                    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+                    compatibilitycheck: null,
+                    dataUrl: "../../unityBuild/Release/build.data",
+                    codeUrl: "../../unityBuild/Release/build.js",
+                    memUrl: "../../unityBuild/Release/build.mem",
+
+                };
+                console.log("posle module 655");
+            </script>
+
+        </div>
+
+       <!-- <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
                 width="860" height="450"
                 codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
             <param name="~/web/web.unity3d" value="web.unity3d" />
@@ -20,15 +46,19 @@
             <embed id="UnityEmbed" src="~/web/web.unity3d" width="600" height="450"
                    type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x"
                    backgroundcolor="25470b" bordercolor="769712" textcolor="c27230" logoimage="~\favicon.png" />
-        </object>
+        </object> -->
+
+        <div id="errorMessageHolder"></div>
 
     </div>
 </div>
 
 <script src="~/MyScripts/TalkToUnity.js"></script>
+<script src="~/unityBuild/TemplateData/UnityProgress.js"></script>
+<script src="~/unityBuild/Release/UnityLoader.js"></script>
+
 
 <script type="text/javascript">
-    alert("!");
     SaySomethingToUnity("Working?");
 
 </script>

@@ -241,6 +241,16 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\Q-Maze.csproj.GenerateResource.Cache" />
     <Content Include="obj\Debug\Q-Maze.csprojResolveAssemblyReference.cache" />
+    <Content Include="unityBuild\index.html" />
+    <Content Include="unityBuild\Release\UnityLoader.js" />
+    <Content Include="unityBuild\TemplateData\favicon.ico" />
+    <Content Include="unityBuild\TemplateData\fullbar.png" />
+    <Content Include="unityBuild\TemplateData\fullscreen.png" />
+    <Content Include="unityBuild\TemplateData\loadingbar.png" />
+    <Content Include="unityBuild\TemplateData\logo.png" />
+    <Content Include="unityBuild\TemplateData\progresslogo.png" />
+    <Content Include="unityBuild\TemplateData\style.css" />
+    <Content Include="unityBuild\TemplateData\UnityProgress.js" />
     <Content Include="web\web.html" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -291,6 +301,9 @@
     <Content Include="Views\Statistics\_PlayerList.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Game\Start.cshtml" />
+    <Content Include="unityBuild\Release\build.datagz" />
+    <Content Include="unityBuild\Release\build.jsgz" />
+    <Content Include="unityBuild\Release\build.memgz" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
