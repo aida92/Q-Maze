@@ -1,11 +1,12 @@
-﻿
+﻿@model QMaze.Models.GameModel
+
 @{
-    ViewBag.Title = "Play";
+    ViewBag.Title = ViewBag.Title = QMaze.Resources.HomeTexts.Play;
 }
 
 <div class="jumbotron">
     <div class="container">
-
+        
         <link rel="stylesheet" href="~/unityBuild/TemplateData/style.css">
 
         <div class="template">
@@ -32,35 +33,50 @@
 
         </div>
 
-       <!-- <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
+        <!--
+        <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
                 width="860" height="450"
                 codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
             <param name="~/web/web.unity3d" value="web.unity3d" />
-
-            <param name="backgroundcolor" value="25470b" />
-            <param name="bordercolor" value="769712" />
-            <param name="textcolor" value="c27230" />
-            <param name="logoimage" value="~\favicon.png" />
 
 
             <embed id="UnityEmbed" src="~/web/web.unity3d" width="600" height="450"
                    type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x"
                    backgroundcolor="25470b" bordercolor="769712" textcolor="c27230" logoimage="~\favicon.png" />
-        </object> -->
-
+        </object> 
+-->
         <div id="errorMessageHolder"></div>
 
     </div>
 </div>
 
-<script src="~/MyScripts/TalkToUnity.js"></script>
 <script src="~/unityBuild/TemplateData/UnityProgress.js"></script>
 <script src="~/unityBuild/Release/UnityLoader.js"></script>
 
 
 <script type="text/javascript">
-    SaySomethingToUnity("Working?");
+    // use this function to send thing to the unity game, i.e. the question list
+    // might be better to try with WWWForm
+    function SendToUnity(arg)
+    {
+        SendMessage("ObjectName", "methodName", "arguments (emmpty string if none)");
+    }
 
+    // this is called from Unity -- works :)
+    // usage: in unity cs or js, use Application.ExternalCall("FunctionName", "args")
+    // or Application.ExternalEval(funcName)
+    function DisplayScore(arg)
+    {
+        alert("The score is " + arg + "!");
+    // update the score in db etc
+    }
+
+    /*
+    function MyFunction2()
+    {
+        var unity = unityObject.getObjectById("UnityContent");
+        unity.SendMessageSendMessage("Test", "displayQuestion", "Hello from web page!");        
+    }*/
 </script>
 
 

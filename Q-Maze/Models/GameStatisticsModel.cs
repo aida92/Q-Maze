@@ -26,7 +26,7 @@ namespace QMaze.Models
             set;
         }
 
-        public enum Ordering { HighScore, GamesPlayed, GamesWon, QuestionsAttempted, QuestionsAnswered, RegisterDate }; //?
+        //public enum Ordering { HighScore, GamesPlayed, GamesWon, QuestionsAttempted, QuestionsAnswered, RegisterDate }; //?
         public IEnumerable<ApplicationUser> AppUsers { get; set; }
 
         public IEnumerable<string> OrderByList

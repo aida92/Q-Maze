@@ -2,14 +2,13 @@
     ViewBag.Title = QMaze.Resources.HomeTexts.Play;
 }
 
-
     <div class="jumbotron">
         <div class="row">
 
             <div class="col-sm-8">
                 <div class="container">
                     <!-- <a href="~/web/web.html" target="_blank">Start playing!</a>-->
-                    <a href='@Url.Action("Start", "Game")'><img src="~/favicon.ico" alt=QMaze.Resources.HomeTexts.Play style="border:0;" class="img-responsive"></a>
+                    <a href='@Url.Action("Start", "Game", new { playerId = "", level = 1 }, null)'><img src="~/favicon.ico" alt=QMaze.Resources.HomeTexts.Play style="border:0;" class="img-responsive"></a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -18,11 +17,13 @@
 
                     var items = new List<SelectListItem>()
             {
-                new SelectListItem() { Text = "res 1", Value = "#" },
-                new SelectListItem() { Text = "res 2", Value = "#" },
+                new SelectListItem() { Text = "beginner", Value = "1" },
+                new SelectListItem() { Text = "intermediate", Value = "2" },
+                new SelectListItem() { Text = "hard", Value = "3" },
+                new SelectListItem() { Text = "insane", Value = "4" },
             };
 
-                    @Html.DropDownList("Name", items, "Choose resolution", new { @class = "form-control" })
+                    @Html.DropDownList("Name", items, "Choose the level", new { @class = "form-control" })
                 }
             </div>
         </div>
