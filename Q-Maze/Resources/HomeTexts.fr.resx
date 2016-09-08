@@ -180,4 +180,10 @@
   <data name="Welcome" xml:space="preserve">
     <value>Bienvenue</value>
   </data>
+  <data name="Easy" xml:space="preserve">
+    <value>Débutant</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
 </root>

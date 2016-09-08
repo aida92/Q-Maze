@@ -25,10 +25,11 @@ namespace QMaze.Controllers
         // GET: Game
         public ActionResult Index()
         {
-            return View();
+            SetupGameModel model = new SetupGameModel();
+            return View(model);
         }
 
-        
+        [HttpGet]
         public ActionResult Start(string playerID, int level)
         {
             if (!User.Identity.IsAuthenticated)
@@ -43,6 +44,16 @@ namespace QMaze.Controllers
                 level = 1;
 
             GameModel model = new GameModel(playerID, level);
+            return View(model);
+        }
+
+
+        [HttpPost]
+        public ActionResult SetLevel(SetupGameModel model, int level)
+        {
+            if (ModelState.IsValid)
+                model.SelectedLevel = level;
+                
             return View(model);
         }
 

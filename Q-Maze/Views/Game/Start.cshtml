@@ -4,9 +4,24 @@
     ViewBag.Title = ViewBag.Title = QMaze.Resources.HomeTexts.Play;
 }
 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="~/unityBuild/TemplateData/style.css" rel="stylesheet" />
+
+
 <div class="jumbotron">
     <div class="container">
-        
+
+        <div id="unityPlayer">
+            <div class="missing">
+                <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+                    <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+                </a>
+            </div>
+        </div>
+
+
+        <!--
         <link rel="stylesheet" href="~/unityBuild/TemplateData/style.css">
 
         <div class="template">
@@ -33,7 +48,7 @@
 
         </div>
 
-        <!--
+        
         <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
                 width="860" height="450"
                 codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
@@ -43,40 +58,59 @@
             <embed id="UnityEmbed" src="~/web/web.unity3d" width="600" height="450"
                    type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x"
                    backgroundcolor="25470b" bordercolor="769712" textcolor="c27230" logoimage="~\favicon.png" />
-        </object> 
+
+        </object>
 -->
+        
+        <iframe src="https://dl.dropboxusercontent.com/u/4585058/GAC/Demo/GAC3DDemo/index.html" style="border:0px #000000 none;" name="Game name" scrolling="no" frameborder="1" marginheight="px" marginwidth="320px" height="320px" width="480px"></iframe>
+
         <div id="errorMessageHolder"></div>
 
     </div>
 </div>
 
+
 <script src="~/unityBuild/TemplateData/UnityProgress.js"></script>
 <script src="~/unityBuild/Release/UnityLoader.js"></script>
+
+
+<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js"></script>
+<script type="text/javascript">
+    function GetUnity() {
+        if (typeof unityObject != "undefined") {
+            return unityObject.getObjectById("unityPlayer");
+        }
+        return null;
+    }
+    if (typeof unityObject != "undefined") {
+        unityObject.embedUnity("unityPlayer", "~/web/web.unity3d", 480, 320);
+    }
+
+</script>
+
+
+
+
+
 
 
 <script type="text/javascript">
     // use this function to send thing to the unity game, i.e. the question list
     // might be better to try with WWWForm
-    function SendToUnity(arg)
-    {
+    function SendToUnity(arg) {
         SendMessage("ObjectName", "methodName", "arguments (emmpty string if none)");
+        // for example
+        SendMessage("Test", "setQuestions", "string with all the questions");
     }
 
     // this is called from Unity -- works :)
     // usage: in unity cs or js, use Application.ExternalCall("FunctionName", "args")
     // or Application.ExternalEval(funcName)
-    function DisplayScore(arg)
-    {
-        alert("The score is " + arg + "!");
-    // update the score in db etc
-    }
+    function DisplayScore(arg) {
+        alert("This is triggered from Unity!");
 
-    /*
-    function MyFunction2()
-    {
-        var unity = unityObject.getObjectById("UnityContent");
-        unity.SendMessageSendMessage("Test", "displayQuestion", "Hello from web page!");        
-    }*/
+        // update the score in db etc
+    }
 </script>
 
 

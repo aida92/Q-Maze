@@ -183,4 +183,10 @@
   <data name="Welcome" xml:space="preserve">
     <value>Willkommen</value>
   </data>
+  <data name="Easy" xml:space="preserve">
+    <value>Anfänger</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Stufe</value>
+  </data>
 </root>

@@ -123,6 +123,9 @@
   <data name="AscDesc" xml:space="preserve">
     <value>Asc/Desc</value>
   </data>
+  <data name="Easy" xml:space="preserve">
+    <value>Easy</value>
+  </data>
   <data name="GamesPlayed" xml:space="preserve">
     <value>Games played</value>
   </data>
@@ -143,6 +146,9 @@
   </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Level</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Log in</value>
