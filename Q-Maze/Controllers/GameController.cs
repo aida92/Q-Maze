@@ -26,6 +26,11 @@ namespace QMaze.Controllers
         public ActionResult Index()
         {
             SetupGameModel model = new SetupGameModel();
+
+            
+
+            //ViewBag.Level = levels;
+
             return View(model);
         }
 
@@ -40,7 +45,7 @@ namespace QMaze.Controllers
                 playerID = AppUser.Id;
             }
 
-            if (level == null || level < 0)
+            if (level < 0)
                 level = 1;
 
             GameModel model = new GameModel(playerID, level);
@@ -49,12 +54,10 @@ namespace QMaze.Controllers
 
 
         [HttpPost]
-        public ActionResult SetLevel(SetupGameModel model, int level)
+        public void LevelSelected(SetupGameModel model)
         {
-            if (ModelState.IsValid)
-                model.SelectedLevel = level;
-                
-            return View(model);
+            ViewBag.SelectedLevel = 6;
+            //return View();
         }
 
         public ActionResult Error(string Message)

@@ -15,7 +15,12 @@ namespace QMaze.DataAccessLayer
             //create the base of questions
             var questions = new List<Question>
             {
-                new Question{Text = "Is this working?", Answers="Hope so!\nNo\nYes", CorrectAnswer="Yes", Points=666}
+                new Question{Text = "One?", Answers="Hope so!\nNo\nYes", CorrectAnswer="2", Points=666},
+                new Question{Text = "Two?", Answers="Hope so!\nNo\nYes", CorrectAnswer="2", Points=666},
+                new Question{Text = "Three?", Answers="Hope so!\nNo\nYes", CorrectAnswer="1", Points=666},
+                new Question{Text = "Four?", Answers="Hope so!\nNo\nYes", CorrectAnswer="1", Points=666},
+                new Question{Text = "Five?", Answers="Hope so!\nNo\nYes", CorrectAnswer="1", Points=666},
+                new Question{Text = "Six?", Answers="Hope so!\nNo\nYes", CorrectAnswer="2", Points=666}
             };
             questions.ForEach(q => context.Questions.Add(q));
             context.SaveChanges();

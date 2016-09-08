@@ -16,24 +16,21 @@ namespace QMaze.Models
         [Display(Name = "Level", ResourceType = typeof(Resources.HomeTexts))]
         public int SelectedLevel { get; set; }
 
-        public IDictionary<int, string> Levels { get; set; }
+        //public IEnumerable<SelectListItem> Levels { get; set; }
+        public List<SelectListItem> Levels;
 
         public SetupGameModel()
         {
             ResolutionX = 500;
             ResolutionY = 500;
-            SelectedLevel = 1;
+            SelectedLevel = 2;
 
-            Levels = new Dictionary<int, string>();
-            //list.Add(QMaze.Resources.HomeTexts.Intermmediate);
-            //list.Add(QMaze.Resources.HomeTexts.Hard);
-            //list.Add(QMaze.Resources.HomeTexts.Insane);
-            //list.Add(QMaze.Resources.HomeTexts.LevelMATF);
-            Levels.Add(1, QMaze.Resources.HomeTexts.Easy);
-            Levels.Add(2, "Intermmediate");
-            Levels.Add(3, "Hard");
-            Levels.Add(4, "Insane");
-            Levels.Add(5, "LevelMATF");
+            Levels = new List<SelectListItem>();
+            Levels.Add(new SelectListItem { Text = QMaze.Resources.HomeTexts.Easy, Value = "1", Selected = true });
+            Levels.Add(new SelectListItem { Text = "Intermediate", Value = "2" });
+            Levels.Add(new SelectListItem { Text = "Hard", Value = "3" });
+            Levels.Add(new SelectListItem { Text = "Insane", Value = "4" });
+            Levels.Add(new SelectListItem { Text = "MATF", Value = "5" });
         }
 
     }

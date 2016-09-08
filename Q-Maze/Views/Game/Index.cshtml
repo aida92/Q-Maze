@@ -13,11 +13,22 @@
                 <a href='@Url.Action("Start", "Game", new { playerId = "", level = Model.SelectedLevel }, null)'><img src="~/favicon.ico" alt=QMaze.Resources.HomeTexts.Play style="border:0;" class="img-responsive"></a>
             </div>
         </div>
+
         <div class="col-lg-4">
 
+
             <div>@Html.LabelFor(m => m.SelectedLevel)</div>
-            <div>@Html.DropDownListFor(m => m.SelectedLevel, new SelectList(Model.Levels, "Key", "Value"))</div>
+            <div>
+                @using (Html.BeginForm("LevelSelected")) 
+                {                
+                    @Html.DropDownListFor(m => m.SelectedLevel, new SelectList(Model.Levels, "Value", "Text")) 
+                }
+                <!--//, "", new { onchange = "submit();" })-->
+                
+            </div>
+            
         </div>
+        
     </div>
 </div>
 

@@ -17,10 +17,28 @@ namespace QMaze.Models
             PlayerId = playerId;
             Player = appContext.Users.Where(x => x.Id == this.PlayerId).First();
             Level = level;
-            won = false;
-            totalScore = 0;
+            Won = false;
+            TotalScore = 0;
 
-            List<Question> quiz = questionContext.Questions.ToList(); // edit this after defining the game 
+
+            // select the correct number of random questions from database 
+            /*quiz = new List<Question>();
+            
+            List<Question> tmpList = questionContext.Questions.ToList();
+            quiz = tmpList;
+            
+            int count = tmpList.Count;
+            Random rnd = new Random();
+            for (int i = 0; i < Level; i++)
+            {
+                int index = rnd.Next() % count;
+                Question tmp = tmpList[index];
+                tmpList[index] = tmpList[i];
+                tmpList[i] = tmp;
+                count--;              
+            }
+
+            quiz.AddRange(tmpList.Take(Level));*/
         }
 
         public int Id { get; set; }
@@ -31,11 +49,12 @@ namespace QMaze.Models
         public virtual ApplicationUser Player { get; set; }
 
         [Display(Name = "Score", ResourceType = typeof(Resources.HomeTexts))]
-        public int totalScore { get; set; }
-        public bool won { get; set; }
+        public int TotalScore { get; set; }
+        public bool Won { get; set; }
 
         public string PlayerId { get; set; }
 
+        //public List<Question> quiz { get; set; }
 
     }
 }
