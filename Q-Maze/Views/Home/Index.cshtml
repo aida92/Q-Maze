@@ -1,9 +1,12 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = QMaze.Resources.HomeTexts.Home;
 }
 <main>
 
-
+    <div class="alert alert-danger alert-dismissable" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Kad bude gotova igrica, napravite neki print screen i sl, i stavite dole
+    </div>
 
     <div class="panel">
 
@@ -41,32 +44,14 @@
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                <span class="sr-only">@Html.Raw(QMaze.Resources.HomeTexts.Previous)</span>
             </a>
             <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                <span class="sr-only">@Html.Raw(QMaze.Resources.HomeTexts.Next)</span>
             </a>
         </div>
 
-    </div>
-
-    <div class="panel panel-info center">
-            Number of users online.<br />
-            Number of available games<br />
-            etc
-    </div>
-
-
-    <div>
-        Unity + SmartFoxServer tutorials:
-        <br />
-        <a target="_blank" href="http://www.smartfoxserver.com/download/sfs2x#p=installer">Download...</a>
-        <br />
-        <a target="_blank" href="https://www.youtube.com/watch?v=-FKgmIoMImY">Filmici</a> o povezivanju SFS + Unity + Baza
-        <br />
-        I jos ponesto korisno ima <a target="_blank" href="http://smartfoxserver.com/blog/integrate-a-website-login-with-smartfoxserver/">ovde</a> i
-        <a target="_blank" href="http://smartfoxserver.com/blog/tips-for-a-successful-smartfoxserver-deployment/">ovde</a> :)
     </div>
 
 </main>

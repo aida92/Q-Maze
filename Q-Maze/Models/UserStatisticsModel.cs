@@ -47,12 +47,17 @@ namespace QMaze.Models
             }
         }
 
-
-        public int MemberFor
+        [Display (Name = "MemberFor", ResourceType=typeof(QMaze.Resources.HomeTexts))]
+        public string MemberFor
         {
             get
             {
-                return (DateTime.Today - AppUser.RegisterDate).Days;
+                int numOfDays = (DateTime.Today - AppUser.RegisterDate).Days;
+                if (numOfDays < 30)
+                    return numOfDays + QMaze.Resources.HomeTexts.MemDays;
+                if (numOfDays < 365)
+                    return (numOfDays / 30) + QMaze.Resources.HomeTexts.MemMonths;
+                return (numOfDays / 365) + QMaze.Resources.HomeTexts.MemYears;
             }
         }
 

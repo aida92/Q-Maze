@@ -79,6 +79,15 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click.
+        /// </summary>
+        public static string Click {
+            get {
+                return ResourceManager.GetString("Click", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Easy.
         /// </summary>
         public static string Easy {
@@ -102,6 +111,15 @@ namespace QMaze.Resources {
         public static string GamesWon {
             get {
                 return ResourceManager.GetString("GamesWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to to see global statics..
+        /// </summary>
+        public static string Global {
+            get {
+                return ResourceManager.GetString("Global", resourceCulture);
             }
         }
         
@@ -142,6 +160,15 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to to see individual statistics..
+        /// </summary>
+        public static string Individual {
+            get {
+                return ResourceManager.GetString("Individual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Language.
         /// </summary>
         public static string Language {
@@ -178,6 +205,51 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Congratulations! You have been playing for .
+        /// </summary>
+        public static string MemberFor {
+            get {
+                return ResourceManager.GetString("MemberFor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  days!.
+        /// </summary>
+        public static string MemDays {
+            get {
+                return ResourceManager.GetString("MemDays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  months!.
+        /// </summary>
+        public static string MemMonths {
+            get {
+                return ResourceManager.GetString("MemMonths", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  years!.
+        /// </summary>
+        public static string MemYears {
+            get {
+                return ResourceManager.GetString("MemYears", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        public static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Order by.
         /// </summary>
         public static string OrderBy {
@@ -192,6 +264,15 @@ namespace QMaze.Resources {
         public static string Play {
             get {
                 return ResourceManager.GetString("Play", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previous.
+        /// </summary>
+        public static string Previous {
+            get {
+                return ResourceManager.GetString("Previous", resourceCulture);
             }
         }
         

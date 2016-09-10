@@ -123,6 +123,9 @@
   <data name="AscDesc" xml:space="preserve">
     <value>Asc/Desc</value>
   </data>
+  <data name="Click" xml:space="preserve">
+    <value>Click</value>
+  </data>
   <data name="Easy" xml:space="preserve">
     <value>Easy</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="GamesWon" xml:space="preserve">
     <value>Games won</value>
+  </data>
+  <data name="Global" xml:space="preserve">
+    <value>to see global statics.</value>
   </data>
   <data name="Hello" xml:space="preserve">
     <value>Hello</value>
@@ -144,6 +150,9 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Individual" xml:space="preserve">
+    <value>to see individual statistics.</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
@@ -156,11 +165,29 @@
   <data name="Logout" xml:space="preserve">
     <value>Log out</value>
   </data>
+  <data name="MemberFor" xml:space="preserve">
+    <value>Congratulations! You have been playing for </value>
+  </data>
+  <data name="MemDays" xml:space="preserve">
+    <value> days!</value>
+  </data>
+  <data name="MemMonths" xml:space="preserve">
+    <value> months!</value>
+  </data>
+  <data name="MemYears" xml:space="preserve">
+    <value> years!</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
   <data name="OrderBy" xml:space="preserve">
     <value>Order by</value>
   </data>
   <data name="Play" xml:space="preserve">
     <value>Play!</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
   </data>
   <data name="QuestionsAnswered" xml:space="preserve">
     <value>Correct answers</value>

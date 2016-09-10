@@ -189,4 +189,31 @@
   <data name="Level" xml:space="preserve">
     <value>Stufe</value>
   </data>
+  <data name="Click" xml:space="preserve">
+    <value>Klick</value>
+  </data>
+  <data name="Global" xml:space="preserve">
+    <value>um Gesamtstatistiken zu sehen.</value>
+  </data>
+  <data name="Individual" xml:space="preserve">
+    <value>um individuelle Statistiken zu sehen.</value>
+  </data>
+  <data name="MemberFor" xml:space="preserve">
+    <value>Glückwunsch! Du spielst seit </value>
+  </data>
+  <data name="MemDays" xml:space="preserve">
+    <value> Tage! </value>
+  </data>
+  <data name="MemMonths" xml:space="preserve">
+    <value> Monate!</value>
+  </data>
+  <data name="MemYears" xml:space="preserve">
+    <value> Jahre! </value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Nächster</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Vorher</value>
+  </data>
 </root>

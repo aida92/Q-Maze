@@ -133,7 +133,7 @@
     <value>Salut </value>
   </data>
   <data name="Here" xml:space="preserve">
-    <value>ici</value>
+    <value>içi</value>
   </data>
   <data name="Highscore" xml:space="preserve">
     <value>Score élevé</value>
@@ -185,5 +185,32 @@
   </data>
   <data name="Level" xml:space="preserve">
     <value>Niveau</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>Clicquez</value>
+  </data>
+  <data name="Global" xml:space="preserve">
+    <value>pour voir les statistiques globales.</value>
+  </data>
+  <data name="Individual" xml:space="preserve">
+    <value>pour voir les statistiques individuelles.</value>
+  </data>
+  <data name="MemberFor" xml:space="preserve">
+    <value>Félicitations! Tu a joué pour </value>
+  </data>
+  <data name="MemDays" xml:space="preserve">
+    <value> journées! </value>
+  </data>
+  <data name="MemMonths" xml:space="preserve">
+    <value> moints!</value>
+  </data>
+  <data name="MemYears" xml:space="preserve">
+    <value> années!</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Précédent</value>
   </data>
 </root>

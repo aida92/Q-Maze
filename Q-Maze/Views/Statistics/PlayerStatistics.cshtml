@@ -39,8 +39,10 @@
 
     <!-- Footer panel contents -->
     <div class="panel-footer">
-        <p>You have been playing for @Html.DisplayFor(Model => Model.MemberFor) days!</p>
-        <p>Click @Html.ActionLink("here", "Index") to go back to global statistics.</p>
+        <p>@Html.LabelFor(Model => Model.MemberFor) <b>@Html.DisplayFor(Model => Model.MemberFor)</b></p>
+        
+        <p>@Html.Raw(QMaze.Resources.HomeTexts.Click) @Html.ActionLink(QMaze.Resources.HomeTexts.Here, "Index")
+         @Html.Raw(QMaze.Resources.HomeTexts.Global)</p>
     </div>
 </div>
 

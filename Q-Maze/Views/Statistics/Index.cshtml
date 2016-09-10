@@ -44,7 +44,8 @@
 
     <!-- Footer panel contents -->
     <div class="panel-footer">
-        <p>Click @Html.ActionLink("here", "PlayerStatistics", new { Id = "" }, null) to see individual statistics.</p>
+        <p>@Html.Raw(QMaze.Resources.HomeTexts.Click) @Html.ActionLink(QMaze.Resources.HomeTexts.Here, "PlayerStatistics", new { Id = "" }, null) 
+        @Html.Raw(QMaze.Resources.HomeTexts.Individual)</p>
     </div>
 </div>
 
