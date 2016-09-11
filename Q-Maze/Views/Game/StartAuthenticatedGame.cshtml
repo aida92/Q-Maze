@@ -1,4 +1,4 @@
-﻿@model QMaze.Models.GameModel
+﻿@model QMaze.Models.AuthenticatedGameModel
 
 @{
     ViewBag.Title = ViewBag.Title = QMaze.Resources.HomeTexts.Play;
@@ -89,8 +89,6 @@
 </script>
 
 
-
-
 <script type="text/javascript">
     // use this function to send thing to the unity game, i.e. the question list
     // might be better to try with WWWForm
@@ -106,9 +104,19 @@
     function DisplayScore(arg) {
         alert("This is triggered from Unity!");
 
-        // update the score in db etc
+        
     }
-</script>
+    // Saves the score in the database
+    // other option with hidden elements?
+    function FinshGame(score, won, totalQ, correctQ)
+    {
+        $.ajax({
+            url: 'GameController/FinishGame',
+            type: 'POST',
+            data: { score: score, won : won, totalQ : totalQ, correctQ : correctQ }
+        });
+    }
 
+</script>
 
 

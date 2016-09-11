@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using QMaze.DataAccessLayer;
 using QMaze.Models;
 using System.Globalization;
 using System.Threading;
@@ -40,7 +39,6 @@ namespace QMaze.Controllers
 
             // stay on the page you were BEFORE clicking to change the language
             return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
-           // return View("Index");
         }
     }
 }

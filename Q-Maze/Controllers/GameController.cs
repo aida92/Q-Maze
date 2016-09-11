@@ -26,30 +26,28 @@ namespace QMaze.Controllers
         public ActionResult Index()
         {
             SetupGameModel model = new SetupGameModel();
-
-            
-
-            //ViewBag.Level = levels;
-
             return View(model);
         }
 
         [HttpGet]
         public ActionResult Start(string playerID, int level)
         {
+            if (level < 0)
+                level = 1;
+            GameModel model;
+
             if (!User.Identity.IsAuthenticated)
-                return Error("You have to be logged in to play");
+            {
+                model = new GameModel(level);
+                return View("StartAnonymousGame", model);
+            }
 
             if (playerID == null || playerID == "")
             {
                 playerID = AppUser.Id;
             }
-
-            if (level < 0)
-                level = 1;
-
-            GameModel model = new GameModel(playerID, level);
-            return View(model);
+            model = new AuthenticatedGameModel(playerID, level);
+            return View("StartAuthenticatedGame", model);
         }
 
 
@@ -59,6 +57,22 @@ namespace QMaze.Controllers
             ViewBag.SelectedLevel = 6;
             //return View();
         }
+
+        [HttpPost]
+        public ActionResult FinishGame(AuthenticatedGameModel model, int score, bool won, int totalQ, int correctQ)
+        {
+            if (ModelState.IsValid)
+            {
+                model.TotalScore = score;
+                model.Won = won;
+                model.TotalQuestions = totalQ;
+                model.CorrectQuestions = correctQ;
+                model.SaveScore();
+            }
+            return RedirectToAction("Home", "Index", "Home");
+            //return View("FinishGame", score);
+        }
+
 
         public ActionResult Error(string Message)
         {
