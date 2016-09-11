@@ -70,6 +70,15 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You are not logged in. Log in or create a new account now to save your score!.
+        /// </summary>
+        public static string anonymous {
+            get {
+                return ResourceManager.GetString("anonymous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Asc/Desc.
         /// </summary>
         public static string AscDesc {
@@ -88,11 +97,29 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm password.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Easy.
         /// </summary>
         public static string Easy {
             get {
                 return ResourceManager.GetString("Easy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use another service to log in..
+        /// </summary>
+        public static string ExternalLog {
+            get {
+                return ResourceManager.GetString("ExternalLog", resourceCulture);
             }
         }
         
@@ -187,6 +214,15 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use a local account to log in..
+        /// </summary>
+        public static string LocalLog {
+            get {
+                return ResourceManager.GetString("LocalLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log in.
         /// </summary>
         public static string Login {
@@ -259,6 +295,15 @@ namespace QMaze.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Play!.
         /// </summary>
         public static string Play {
@@ -318,6 +363,15 @@ namespace QMaze.Resources {
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register as a new user.
+        /// </summary>
+        public static string RegNew {
+            get {
+                return ResourceManager.GetString("RegNew", resourceCulture);
             }
         }
         

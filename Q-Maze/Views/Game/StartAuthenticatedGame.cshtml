@@ -4,6 +4,11 @@
     ViewBag.Title = ViewBag.Title = QMaze.Resources.HomeTexts.Play;
 }
 
+<main>
+    @Html.Partial("_Unity")
+</main>
+
+<!--
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="~/unityBuild/TemplateData/style.css" rel="stylesheet" />
@@ -60,7 +65,7 @@
                    backgroundcolor="25470b" bordercolor="769712" textcolor="c27230" logoimage="~\favicon.png" />
 
         </object>
--->
+
         <div id="game">
             <iframe src="https://dl.dropboxusercontent.com/u/4585058/GAC/Demo/GAC3DDemo/index.html" style="border:0px #000000 none;" name="Game name" scrolling="no" frameborder="1" marginheight="px" marginwidth="320px" height="700px" width="1000px"></iframe>
         </div>
@@ -86,37 +91,4 @@
         unityObject.embedUnity("unityPlayer", "~/web/web.unity3d", 1000, 700);
     }
 
-</script>
-
-
-<script type="text/javascript">
-    // use this function to send thing to the unity game, i.e. the question list
-    // might be better to try with WWWForm
-    function SendToUnity(arg) {
-        SendMessage("ObjectName", "methodName", "arguments (emmpty string if none)");
-        // for example
-        SendMessage("Test", "setQuestions", "string with all the questions");
-    }
-
-    // this is called from Unity -- works :)
-    // usage: in unity cs or js, use Application.ExternalCall("FunctionName", "args")
-    // or Application.ExternalEval(funcName)
-    function DisplayScore(arg) {
-        alert("This is triggered from Unity!");
-
-        
-    }
-    // Saves the score in the database
-    // other option with hidden elements?
-    function FinshGame(score, won, totalQ, correctQ)
-    {
-        $.ajax({
-            url: 'GameController/FinishGame',
-            type: 'POST',
-            data: { score: score, won : won, totalQ : totalQ, correctQ : correctQ }
-        });
-    }
-
-</script>
-
-
+</script>-->

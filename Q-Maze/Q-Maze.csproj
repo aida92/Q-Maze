@@ -297,6 +297,7 @@
     <Content Include="unityBuild\Release\build.memgz" />
     <Content Include="Views\Game\StartAnonymousGame.cshtml" />
     <Content Include="Views\Game\FinishGame.cshtml" />
+    <Content Include="Views\Game\_Unity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />

@@ -213,4 +213,22 @@
   <data name="Welcome" xml:space="preserve">
     <value>Welcome</value>
   </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="ExternalLog" xml:space="preserve">
+    <value>Use another service to log in.</value>
+  </data>
+  <data name="LocalLog" xml:space="preserve">
+    <value>Use a local account to log in.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RegNew" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+  <data name="anonymous" xml:space="preserve">
+    <value>You are not logged in. Log in or create a new account now to save your score!</value>
+  </data>
 </root>
