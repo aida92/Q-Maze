@@ -73,15 +73,6 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     @RenderSection("scripts", required: false)
 
-    <script>
-        console.log("SAD CE ;)");
-        $(document).ready(function () {
-            console.log("USOOOO", "ima unity => " + detectUnityWebPlayer());
-            if (!detectUnityWebPlayer()) {
-                $("#errorMessageHolder").html("In order to play this game you need to download UnityWebPlayer.<br/>"
-                    + "You can download it from <a href='https://unity3d.com/webplayer'>here</a>.");
-            }
-        });
-    </script>
+    
 </body>
 </html>

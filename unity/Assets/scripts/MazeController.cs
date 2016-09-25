@@ -21,9 +21,12 @@ public class MazeController : MonoBehaviour {
 	public GameObject prefTopRightBottom;
 	public GameObject prefTopLeftBottom;
 	public GameObject prefTopRightLeft;
-	public GameObject prefRightBottomLeft;
+    public GameObject prefRightBottomLeft;
 
-	public GameObject player;
+    public GameObject prefQuestion;
+    public GameObject prefEnd;
+
+    public GameObject player;
 
 	public Maze maze;
 
@@ -33,10 +36,16 @@ public class MazeController : MonoBehaviour {
 	public Transform mazeHolder;
 	public List<GameObject> cells = new List<GameObject>();
 
-	// Use this for initialization
-	void Start() {
-		createMaze();
-	}
+    private Questioner _questioner;
+
+    [Range(1, 20)]
+    public int questionDensity = 7;
+
+    // Use this for initialization
+    void Start() {
+        _questioner = GetComponent<Questioner>();
+
+    }
 
 	// Update is called once per frame
 	void Update() {
@@ -45,22 +54,34 @@ public class MazeController : MonoBehaviour {
 		}
 	}
 
-	private void createMaze(){
-		foreach (GameObject obj in cells) { // cells are 1x1 objects, like topRight
+	public IEnumerator createMaze() {
+        yield return new WaitForSeconds(2);
+        foreach (GameObject obj in cells) { // cells are 1x1 objects, like topRight
 			Destroy (obj);
 		}
         mazeHolder.position = Vector3.zero;
-
         cells.Clear ();
+
+        _questioner.setRandom( Mathf.FloorToInt( mazeSize.x * mazeSize.y / questionDensity ) );
+
 		maze = new Maze((int)mazeSize.x, (int)mazeSize.y, startPosition);
 		Debug.Log ("START POINT => " + maze.startPoint);
 		displayMaze();
-		player.transform.position = new Vector3 (maze.startPoint.X+0.5f, 0, maze.startPoint.Y + 0.5f);
+        player.transform.position = new Vector3(maze.startPoint.X, 0, maze.startPoint.Y + 0.5f);
+
+        GameObject eCell = Instantiate(prefEnd, new Vector3(mazeSize.x-1, 0, mazeSize.y - 0.5f), Quaternion.identity, mazeHolder) as GameObject;
+        var endQ = new Question("Gotovo je. Nema Vise,Bla|Test|Kraj,Kraj");
+        eCell.GetComponent<QuestionItem>().question = endQ;
+        eCell.GetComponent<QuestionItem>().isEnd = true;
+        eCell.GetComponent<QuestionItem>().setPlayer(player.transform);
+
         //mazeHolder.position = new Vector3(0.5f,0,0);
     }
 
 	public void displayMaze() {
 		int revY = 0;
+        int insertQuestion = 0;
+        int questionIndex = 0;
 		for (var y = 0; y < maze._height; y++) {
 			revY = maze._height - 1 - y;
             for (var x = 0; x < maze._width; x++) {
@@ -96,10 +117,22 @@ public class MazeController : MonoBehaviour {
 				} else {
 					Debug.Log ("OVO NEMA, A TREBA => maze[x,y] => " + maze[x,y]);
 				}
+
 				if( cellPrefab != null ){
 					cells.Add (Instantiate (cellPrefab, new Vector3 (x, 0, revY), Quaternion.identity, mazeHolder) as GameObject);
-				}
-			}
+                }
+
+                if (insertQuestion == questionDensity) {
+                    GameObject qCell = Instantiate(prefQuestion, new Vector3(x, 0, revY+0.5f), Quaternion.identity, mazeHolder) as GameObject;
+                    qCell.GetComponent<QuestionItem>().question = _questioner.selected[questionIndex];
+                    qCell.GetComponent<QuestionItem>().setPlayer(player.transform);
+                    cells.Add(qCell);
+                    questionIndex++;
+                    insertQuestion = 0;
+                } else {
+                    insertQuestion++;
+                }
+            }
 		}
 	}
 

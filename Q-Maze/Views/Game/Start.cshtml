@@ -7,108 +7,67 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="~/unityBuild/TemplateData/style.css" rel="stylesheet" />
+<script src="~/unityBuild/TemplateData/UnityProgress.js"></script>
 
-
-<div class="jumbotron">
-    <div class="container">
-
-        <div id="unityPlayer">
-            <div class="missing">
-                <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-                    <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-                </a>
-            </div>
-        </div>
-
-
-        <!--
-        <link rel="stylesheet" href="~/unityBuild/TemplateData/style.css">
-
-        <div class="template">
-            <div class="template-wrap clear">
-                <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
-                <br>
-                <div class="logo"></div>
-                <div class="fullscreen"><img src="~/unityBuild/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-                <div class="title">QMaze</div>
-            </div>
-            <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-            <script type='text/javascript'>
-                var Module = {
-                    TOTAL_MEMORY: 268435456,
-                    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-                    compatibilitycheck: null,
-                    dataUrl: "../../unityBuild/Release/build.data",
-                    codeUrl: "../../unityBuild/Release/build.js",
-                    memUrl: "../../unityBuild/Release/build.mem",
-
-                };
-                console.log("posle module 655");
-            </script>
-
-        </div>
-
-        
-        <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
-                width="860" height="450"
-                codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
-            <param name="~/web/web.unity3d" value="web.unity3d" />
-
-
-            <embed id="UnityEmbed" src="~/web/web.unity3d" width="600" height="450"
-                   type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x"
-                   backgroundcolor="25470b" bordercolor="769712" textcolor="c27230" logoimage="~\favicon.png" />
-
-        </object>
--->
-        <div id="game">
-            <iframe src="https://dl.dropboxusercontent.com/u/4585058/GAC/Demo/GAC3DDemo/index.html" style="border:0px #000000 none;" name="Game name" scrolling="no" frameborder="1" marginheight="px" marginwidth="320px" height="700px" width="1000px"></iframe>
-        </div>
-        <div id="errorMessageHolder"></div>
-
+<div class="template">
+    <p class="header"><span>Unity WebGL Player | </span>QMaze</p>
+    <div class="template-wrap clear">
+        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+        <br>
+        <div class="logo"></div>
+        <div class="fullscreen"><img src="../unityBuild/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+        <div class="title">QMaze</div>
     </div>
+    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+    <script type='text/javascript'>
+        var Module = {
+            TOTAL_MEMORY: 268435456,
+            errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+            compatibilitycheck: null,
+            dataUrl: "./../unityBuild/Release/build.data",
+            codeUrl: "./../unityBuild/Release/build.js",
+            memUrl: "./../unityBuild/Release/build.mem",
+
+        };
+    </script>
+    <script src="~/unityBuild/Release/UnityLoader.js"></script>
+
+
+    <script type="text/javascript">
+        console.log("novo");
+        // use this function to send thing to the unity game, i.e. the question list
+        // might be better to try with WWWForm
+        /*function SendToUnity(objName, methodName, args) {
+            SendMessage(objName, methodName, args);
+            // for example
+            //SendMessage("Test", "setQuestions", "string with all the questions");
+        }*/
+
+        // this is called from Unity -- works :)
+        // usage: in unity cs or js, use Application.ExternalCall("FunctionName", "args")
+        // or Application.ExternalEval(funcName)
+        function DisplayScore(arg) {
+            alert("This is triggered from Unity!");
+
+            // update the score in db etc
+        }
+
+        function testera(args) {
+            console.log(args);
+        }
+
+        /*
+        console.log("SAD CE ;)");
+        $(document).ready(function () {
+            console.log("USOOOO", "ima unity => " + detectUnityWebPlayer());
+            if (!detectUnityWebPlayer()) {
+                $("#errorMessageHolder").html("In order to play this game you need to download UnityWebPlayer.<br/>"
+                    + "You can download it from <a href='https://unity3d.com/webplayer'>here</a>.");
+            }
+        });*/
+    </script>
 </div>
 
-
-<script src="~/unityBuild/TemplateData/UnityProgress.js"></script>
-<script src="~/unityBuild/Release/UnityLoader.js"></script>
-
-
-<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js"></script>
-<script type="text/javascript">
-    function GetUnity() {
-        if (typeof unityObject != "undefined") {
-            return unityObject.getObjectById("unityPlayer");
-        }
-        return null;
-    }
-    if (typeof unityObject != "undefined") {
-        unityObject.embedUnity("unityPlayer", "~/web/web.unity3d", 1000, 700);
-    }
-
-</script>
-
-
-
-
-<script type="text/javascript">
-    // use this function to send thing to the unity game, i.e. the question list
-    // might be better to try with WWWForm
-    function SendToUnity(arg) {
-        SendMessage("ObjectName", "methodName", "arguments (emmpty string if none)");
-        // for example
-        SendMessage("Test", "setQuestions", "string with all the questions");
-    }
-
-    // this is called from Unity -- works :)
-    // usage: in unity cs or js, use Application.ExternalCall("FunctionName", "args")
-    // or Application.ExternalEval(funcName)
-    function DisplayScore(arg) {
-        alert("This is triggered from Unity!");
-
-        // update the score in db etc
-    }
-</script>
 
 
 

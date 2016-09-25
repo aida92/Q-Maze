@@ -66,7 +66,15 @@
     <Compile Include="Assets\scripts\Follow.cs" />
     <Compile Include="Assets\scripts\MazeController.cs" />
     <Compile Include="Assets\scripts\MazeGeneration.cs" />
+    <Compile Include="Assets\scripts\NetHelper.cs" />
+    <Compile Include="Assets\scripts\NetResponse.cs" />
     <Compile Include="Assets\scripts\PlayerControll.cs" />
+    <Compile Include="Assets\scripts\QButton.cs" />
+    <Compile Include="Assets\scripts\Question.cs" />
+    <Compile Include="Assets\scripts\QuestionItem.cs" />
+    <Compile Include="Assets\scripts\Questioner.cs" />
+    <Compile Include="Assets\scripts\Score.cs" />
+    <Compile Include="Assets\scripts\User.cs" />
     <Compile Include="Assets\scripts\Waller.cs" />
   </ItemGroup>
   <ItemGroup>

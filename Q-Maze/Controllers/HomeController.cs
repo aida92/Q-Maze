@@ -11,7 +11,7 @@ using System.Threading;
 
 namespace QMaze.Controllers
 {
-    [RequireHttps]
+    //[RequireHttps]
     
     public class HomeController : Controller
     {
