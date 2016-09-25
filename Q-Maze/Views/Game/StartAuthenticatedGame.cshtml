@@ -1,12 +1,17 @@
-﻿@model QMaze.Models.GameModel
+﻿@model QMaze.Models.AuthenticatedGameModel
 
 @{
     ViewBag.Title = ViewBag.Title = QMaze.Resources.HomeTexts.Play;
 }
 
+<main>
+    @Html.Partial("_Unity")
+</main>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="~/unityBuild/TemplateData/style.css" rel="stylesheet" />
+
 <script src="~/unityBuild/TemplateData/UnityProgress.js"></script>
 
 <div class="template">
@@ -67,7 +72,3 @@
         });*/
     </script>
 </div>
-
-
-
-

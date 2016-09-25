@@ -216,4 +216,22 @@
   <data name="Previous" xml:space="preserve">
     <value>Vorher</value>
   </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Bestätige das Kennwort</value>
+  </data>
+  <data name="ExternalLog" xml:space="preserve">
+    <value>Verwende einen anderen Dienst anzumelden.</value>
+  </data>
+  <data name="LocalLog" xml:space="preserve">
+    <value>Verwende ein lokales Konto anzumelden.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Kennwort</value>
+  </data>
+  <data name="RegNew" xml:space="preserve">
+    <value>Registrieren als neuer Benutzer</value>
+  </data>
+  <data name="anonymous" xml:space="preserve">
+    <value>Sie sind nicht angemeldet. Anmelden Sie oder erstellen jetzt ein neues Konto um Ihre Punkte zu speichern!</value>
+  </data>
 </root>

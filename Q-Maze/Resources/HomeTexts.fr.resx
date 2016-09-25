@@ -213,4 +213,22 @@
   <data name="Previous" xml:space="preserve">
     <value>Précédent</value>
   </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirmer le mot de passe</value>
+  </data>
+  <data name="ExternalLog" xml:space="preserve">
+    <value>Utiliser un autre service pour connecter.</value>
+  </data>
+  <data name="LocalLog" xml:space="preserve">
+    <value>Utiliser un compte local pour connecter.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="RegNew" xml:space="preserve">
+    <value>Inscriver en tant que nouvel utilisateur</value>
+  </data>
+  <data name="anonymous" xml:space="preserve">
+    <value>Vous n'êtes pas connecté. Connexion ou créer  maintenant un compte nouveau pour enregistrer votre score!</value>
+  </data>
 </root>

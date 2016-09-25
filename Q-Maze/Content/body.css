@@ -32,3 +32,8 @@
 .table {
     background-color: #faf1ea;
 }
+
+.alert-info {
+    background-color: #c7f1a7;
+    color: #3a6e11;
+}
